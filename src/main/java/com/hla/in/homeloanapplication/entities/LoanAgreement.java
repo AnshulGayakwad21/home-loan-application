@@ -1,4 +1,5 @@
 package com.hla.in.homeloanapplication.entities;
 
-public class df {
+public class LoanAgreement {
+
 }
