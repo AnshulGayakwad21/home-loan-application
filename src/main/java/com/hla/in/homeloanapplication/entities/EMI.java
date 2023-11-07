@@ -1,29 +1,37 @@
 package com.hla.in.homeloanapplication.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.time.LocalDate;
 
+@Entity
+
 public class EMI {
-	private long emiid;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long emiId;
 	private LocalDate dueDate;
 	private double emiAmount;
 	private double loanAmount;
 	private double interestAmount;
 	private long loanAgreementId;
-	public EMI(long emiid, LocalDate dueDate, double emiAmount, double loanAmount, double interestAmount,
+	public EMI(long emiId, LocalDate dueDate, double emiAmount, double loanAmount, double interestAmount,
 			long loanAgreementId) {
 		super();
-		this.emiid = emiid;
+		this.emiId = emiId;
 		this.dueDate = dueDate;
 		this.emiAmount = emiAmount;
 		this.loanAmount = loanAmount;
 		this.interestAmount = interestAmount;
 		this.loanAgreementId = loanAgreementId;
 	}
-	public long getEmiid() {
-		return emiid;
+	public long getEmiId() {
+		return emiId;
 	}
-	public void setEmiid(long emiid) {
-		this.emiid = emiid;
+	public void setEmiId(long emiId) {
+		this.emiId = emiId;
 	}
 	public LocalDate getDueDate() {
 		return dueDate;
@@ -57,12 +65,8 @@ public class EMI {
 	}
 	@Override
 	public String toString() {
-		return "EMI [emiid=" + emiid + ", dueDate=" + dueDate + ", emiAmount=" + emiAmount + ", loanAmount="
+		return "EMI [emiId=" + emiId + ", dueDate=" + dueDate + ", emiAmount=" + emiAmount + ", loanAmount="
 				+ loanAmount + ", interestAmount=" + interestAmount + ", loanAgreementId=" + loanAgreementId + "]";
 	}
-	
-	
-	
-	
-
 }
+// Author : Saikiran
