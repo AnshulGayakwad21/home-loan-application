@@ -1,9 +1,11 @@
 package com.hla.in.homeloanapplication.entities;
 
+import lombok.EqualsAndHashCode;
+
 import javax.persistence.Entity;
 
 @Entity
-
+@EqualsAndHashCode(callSuper = true)
 public class FinanceVerificationOfficer extends User{
     private String finOfficerName;
     private String finOfficerContact;

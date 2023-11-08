@@ -8,6 +8,9 @@ public class Admin extends User{
     private String adminName;
     private String adminContact;
 
+    public Admin() {
+        super();
+    }
     public Admin(int userId, String password, String role, String adminName, String adminContact) {
         super(userId, password, role);
         this.adminName = adminName;

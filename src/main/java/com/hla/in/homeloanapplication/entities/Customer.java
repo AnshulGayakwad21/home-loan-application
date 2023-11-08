@@ -1,8 +1,11 @@
 package com.hla.in.homeloanapplication.entities;
 
+import lombok.EqualsAndHashCode;
+
 import javax.persistence.Entity;
 import java.time.LocalDate;
 @Entity
+@EqualsAndHashCode(callSuper = true)
 public class Customer extends User{
     private String customerName;
     private  String mobileNumber;

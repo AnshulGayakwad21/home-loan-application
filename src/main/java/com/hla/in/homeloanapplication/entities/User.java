@@ -2,8 +2,8 @@ package com.hla.in.homeloanapplication.entities;
 
 import javax.persistence.*;
 
-@Entity
 @Table(name = "loan_user")
+@MappedSuperclass
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
