@@ -18,6 +18,7 @@ import com.hla.in.homeloanapplication.repository.ILoanAgreementRepository;
 import com.hla.in.homeloanapplication.repository.ILoanApplicationRepository;
 
 import net.bytebuddy.dynamic.DynamicType.Builder.FieldDefinition.Optional;
+import util.EMICalculator;
 
 @Service
 public class ILoanAgreementServiceImpl implements ILoanAgreementService {
@@ -45,7 +46,7 @@ public class ILoanAgreementServiceImpl implements ILoanAgreementService {
 			if (optional.isPresent()) {
 				double loanAmount = optional.get().getLoanApprovedAmount();
 
-				Emi Calculator emiCal = new EmiCalculator();
+				EMICalculator emiCal = new EMICalculator();
 				emiCal.setLoanAmount(loanAmount);
 				emiCal.setTenure(12);
 				emiCal.setRateOfInterest(0.10);

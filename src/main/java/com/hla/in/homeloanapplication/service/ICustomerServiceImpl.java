@@ -1,6 +1,5 @@
 package com.hla.in.homeloanapplication.service;
 
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,10 +19,8 @@ import com.hla.in.homeloanapplication.repository.ICustomerRepository;
 import com.hla.in.homeloanapplication.repository.ILoanAgreementRepository;
 import com.hla.in.homeloanapplication.repository.ILoanApplicationRepository;
 
-
-
 @Service
-public abstract class ICustomerServiceImpl implements ICustomerService {
+public class ICustomerServiceImpl implements ICustomerService {
 	Logger logger = Logger.getLogger(ICustomerServiceImpl.class.getName());
 
 	@Autowired

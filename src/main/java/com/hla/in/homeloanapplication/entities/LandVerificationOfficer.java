@@ -5,7 +5,7 @@ import lombok.EqualsAndHashCode;
 import javax.persistence.Entity;
 
 @Entity
-@EqualsAndHashCode(callSuper = true)
+//@EqualsAndHashCode(callSuper = true)
 public class LandVerificationOfficer extends User{
     private String officerName;
     private String officerContact;

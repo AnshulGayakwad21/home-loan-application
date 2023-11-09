@@ -10,8 +10,12 @@ public class LoanAgreement {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long loanAgreementId;
 	@Column
+	//loanApplicationId is not present in the MAster Home loan application
+	//check it once
 	private long loanApplicationId;
 	@OneToMany(cascade = CascadeType.ALL)
+	//We can write this, as per the Instructor
+	//@OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
 	@JoinTable(name = "LOAN_EMI", joinColumns = @JoinColumn(name = "loanAgreementId" ),
 			inverseJoinColumns = @JoinColumn(name = "emiId"))
 	private Set<EMI> allemis = new HashSet<>();
