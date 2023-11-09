@@ -1,4 +1,4 @@
-package util;
+package com.hla.in.homeloanapplication.util;
 
 public class EMICalculator {
 	

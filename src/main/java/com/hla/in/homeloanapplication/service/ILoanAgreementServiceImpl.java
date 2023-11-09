@@ -16,9 +16,9 @@ import com.hla.in.homeloanapplication.entities.LoanApplication;
 import com.hla.in.homeloanapplication.exceptions.InvalidLoanAgreementException;
 import com.hla.in.homeloanapplication.repository.ILoanAgreementRepository;
 import com.hla.in.homeloanapplication.repository.ILoanApplicationRepository;
+import com.hla.in.homeloanapplication.util.EMICalculator;
 
 import net.bytebuddy.dynamic.DynamicType.Builder.FieldDefinition.Optional;
-import util.EMICalculator;
 
 @Service
 public class ILoanAgreementServiceImpl implements ILoanAgreementService {
