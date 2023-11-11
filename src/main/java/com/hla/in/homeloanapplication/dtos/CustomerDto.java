@@ -32,8 +32,8 @@ public class CustomerDto {
     @Email(message = "Please enter a valid email address")
     private String emailId;
 
+    @NotNull(message = "Please enter a valid Date Of Birth")
     @NotEmpty(message = "DOB cannot be empty")
-    @JsonFormat(pattern = "yyy-MM-dd")
     private LocalDate dateOfBirth;
 
     @NotEmpty(message = "Please Provide Gender")

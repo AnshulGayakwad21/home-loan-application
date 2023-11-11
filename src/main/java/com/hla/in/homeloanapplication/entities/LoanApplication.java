@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 @Entity
 @Getter
@@ -37,6 +38,16 @@ public class LoanApplication {
     @Column
     @Enumerated(EnumType.STRING)
     private Status status;
+    @NotNull
+    private double totalAnnualIncome;
+    @NotNull
+    private double monthlyExpenses;
+    @NotNull
+    private double otherMonthlyExpenses;
+
+    @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @JoinColumn(name = "scheme_scheme_id", referencedColumnName = "schemeId")
+    Scheme scheme;
 ////////////////////////////////////////////////////////////////////////////////////////////////
     //added this relationship from Master homeloan application
     //If it is giving errors, then delete it
@@ -45,18 +56,5 @@ public class LoanApplication {
     LoanAgreement loanAgreement;
 
 
-    @Override
-    public String toString() {
-        return "LoanApplication{" +
-                "applicationId=" + applicationId +
-                ", applicationDate=" + applicationDate +
-                ", customer=" + customer +
-                ", loanAppliedAmount=" + loanAppliedAmount +
-                ", loanApprovedAmount=" + loanApprovedAmount +
-                ", landVerificationApproval=" + landVerificationApproval +
-                ", financeVerificationApproval=" + financeVerificationApproval +
-                ", adminApproval=" + adminApproval +
-                ", status=" + status +
-                '}';
-    }
+
 }

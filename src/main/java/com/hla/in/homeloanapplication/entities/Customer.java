@@ -8,7 +8,7 @@ import java.time.LocalDate;
 @EqualsAndHashCode(callSuper = true)
 public class Customer extends User{
     private String customerName;
-    private  String mobileNumber;
+    private String mobileNumber;
     private String emailId;
     private LocalDate dateOfBirth;
     private String gender;

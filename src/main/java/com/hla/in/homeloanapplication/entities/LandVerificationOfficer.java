@@ -1,10 +1,14 @@
 package com.hla.in.homeloanapplication.entities;
 
-import lombok.EqualsAndHashCode;
+import lombok.*;
 
 import javax.persistence.Entity;
 
 @Entity
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 //@EqualsAndHashCode(callSuper = true)
 public class LandVerificationOfficer extends User{
     private String officerName;
@@ -16,29 +20,13 @@ public class LandVerificationOfficer extends User{
         this.officerContact = officerContact;
     }
 
-    public String getOfficerName() {
-        return officerName;
-    }
-
-    public void setOfficerName(String officerName) {
-        this.officerName = officerName;
-    }
-
-    public String getOfficerContact() {
-        return officerContact;
-    }
-
-    public void setOfficerContact(String officerContact) {
-        this.officerContact = officerContact;
-    }
-
-    @Override
-    public String toString() {
-        return "LandVerificationOfficer{" +
-                "officerName='" + officerName + '\'' +
-                ", officerContact='" + officerContact + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "LandVerificationOfficer{" +
+//                "officerName='" + officerName + '\'' +
+//                ", officerContact='" + officerContact + '\'' +
+//                '}';
+//    }
 }
 
 //Author : Anshul Gayakwad

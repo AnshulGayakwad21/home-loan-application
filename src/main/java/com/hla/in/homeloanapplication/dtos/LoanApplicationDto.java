@@ -45,13 +45,13 @@ public class LoanApplicationDto {
     ////////////////////////////////////////////////////////////////////////
     // This is Extra stuff from Master home loan application
 
-//    @Min(value = 0,message = "scheme id cannot be negative")
-//    private int schemeId;
-//    @Min(value = 0,message = "Cannot be less than 0")
-//    private double totalAnnualIncome;
-//    @Min(value = 0,message = "Cannot be less than 0")
-//    private double monthlyExpenses;
-//    @Min(value = 0,message = "Cannot be less than 0")
-//    private double otherMonthlyExpenses;
+    @Min(value = 0,message = "scheme id cannot be negative")
+    private int schemeId;
+    @Min(value = 0,message = "Cannot be less than 0")
+    private double totalAnnualIncome;
+    @Min(value = 0,message = "Cannot be less than 0")
+    private double monthlyExpenses;
+    @Min(value = 0,message = "Cannot be less than 0")
+    private double otherMonthlyExpenses;
 
 }
