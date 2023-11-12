@@ -8,6 +8,7 @@ import com.hla.in.homeloanapplication.repository.ISchemeRepository;
 import com.hla.in.homeloanapplication.service.ISchemeService;
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -40,8 +41,9 @@ public class ISchemeServiceImpl implements ISchemeService {
     public Scheme addScheme(SchemeDto schemeDto) {
         logger.info("Entered in addScheme method in ISchemeServiceClass");
         Scheme scheme = new Scheme();
-        scheme.setInterestRate(schemeDto.getInterestRate());
-        scheme.setTenure(schemeDto.getTenure());
+        BeanUtils.copyProperties(schemeDto, scheme);
+//        scheme.setInterestRate(schemeDto.getInterestRate());
+//        scheme.setTenure(schemeDto.getTenure());
         return schemeRepo.save(scheme);
     }
 

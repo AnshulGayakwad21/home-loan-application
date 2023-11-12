@@ -14,6 +14,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CustomerDto {
+    //private int userId;
+
     @NotEmpty(message = "Customer Name can't be empty!")
     @Size(min = 2, max = 25, message = "Length of Customer name should be greater than 2 & less than 25")
     @Pattern(regexp = "^[a-zA-Z]*$", message = "Accepts only alphabets! Without Space")
@@ -34,7 +36,7 @@ public class CustomerDto {
 
     @NotNull(message = "Please enter a valid Date Of Birth")
     @NotEmpty(message = "DOB cannot be empty")
-    private LocalDate dateOfBirth;
+    private String dateOfBirth;
 
     @NotEmpty(message = "Please Provide Gender")
     @Pattern(regexp = "^[a-zA-Z]*$", message = "Please enter Alphabets only")

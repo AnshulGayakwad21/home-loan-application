@@ -13,6 +13,7 @@ import com.hla.in.homeloanapplication.repository.ILoanApplicationRepository;
 import com.hla.in.homeloanapplication.service.ICustomerService;
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -51,41 +52,41 @@ public class ICustomerServiceImpl implements ICustomerService {
     }
 
     @Override
-    public Customer addCustomer(CustomerDto customer) throws CouldNotBeAddedException {
+    public Customer addCustomer(CustomerDto customerDto) throws CouldNotBeAddedException {
         logger.info("Entered into addCustomer method");
-        if (custRepo.findByMobileNumber(customer.getMobileNumber()) != null) {
-            throw new CouldNotBeAddedException("Customer already exists");
-        }
+//        if (custRepo.findByMobileNumber(customer.getMobileNumber()) != null) {
+//            throw new CouldNotBeAddedException("Customer already exists");
+//        }
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/MM/yyyy");
-        String date = String.valueOf(customer.getDateOfBirth());
+        //String date = String.valueOf(customerDto.getDateOfBirth());
 
         //convert String to LocalDate
-        LocalDate dob = LocalDate.parse(date, formatter);
-
-        /*
-        checking for age > 18 years
-         */
-        LocalDate now = LocalDate.now();
-        long age = ChronoUnit.YEARS.between(dob, now);
-        if (age < 18) {
-            throw new CouldNotBeAddedException("Age should be at least 18");
-        }
+        //LocalDate dob = LocalDate.parse(date, formatter);
+//
+//        /*
+//        checking for age > 18 years
+//         */
+//        LocalDate now = LocalDate.now();
+//        long age = ChronoUnit.YEARS.between(dob, now);
+//        if (age < 18) {
+//            throw new CouldNotBeAddedException("Age should be at least 18");
+//        }
 
 
         Customer newCustomer = new Customer();
-        newCustomer.setCustomerName(customer.getCustomerName());
-        newCustomer.setGender(customer.getGender());
-        //newCustomer.setEmail(customer.getEmail());
-        newCustomer.setPassword(customer.getPassword());
-        newCustomer.setMobileNumber(customer.getMobileNumber());
-        newCustomer.setAadharNumber(customer.getAadharNumber());
-        newCustomer.setPanNumber(customer.getPanNumber());
-        newCustomer.setNationality(customer.getNationality());
-        newCustomer.setRole("CUSTOMER");
-        newCustomer.setDateOfBirth(customer.getDateOfBirth());
-        //newCustomer.setDateOfBirth(LocalDate.parse(customer.getDateOfBirth(), formatter));
+//        newCustomer.setCustomerName(customerDto.getCustomerName());
+//        newCustomer.setGender(customerDto.getGender());
+//        newCustomer.setEmailId(customerDto.getEmailId());
+//        newCustomer.setPassword(customerDto.getPassword());
+//        newCustomer.setMobileNumber(customerDto.getMobileNumber());
+//        newCustomer.setAadharNumber(customerDto.getAadharNumber());
+//        newCustomer.setPanNumber(customerDto.getPanNumber());
+//        newCustomer.setNationality(customerDto.getNationality());
 
+        BeanUtils.copyProperties(customerDto, newCustomer);
+        newCustomer.setDateOfBirth(LocalDate.parse(customerDto.getDateOfBirth(), formatter));
 
+        newCustomer.setRole("customer");
         return custRepo.save(newCustomer);
     }
 

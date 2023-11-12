@@ -14,11 +14,11 @@ public class LandVerificationOfficer extends User{
     private String officerName;
     private String officerContact;
 
-    public LandVerificationOfficer(int userId, String password, String role, String officerName, String officerContact) {
-        super(userId, password, role);
-        this.officerName = officerName;
-        this.officerContact = officerContact;
-    }
+//    public LandVerificationOfficer(int userId, String password, String role, String officerName, String officerContact) {
+//        super(userId, password, role);
+//        this.officerName = officerName;
+//        this.officerContact = officerContact;
+//    }
 
 //    @Override
 //    public String toString() {

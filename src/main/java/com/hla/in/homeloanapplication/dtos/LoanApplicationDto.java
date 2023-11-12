@@ -18,9 +18,9 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class LoanApplicationDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long applicationId;
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.AUTO)
+//    private long applicationId;
 
     @JsonFormat(pattern="yyyy-MM-dd")
     private LocalDate applicationDate;
@@ -43,7 +43,6 @@ public class LoanApplicationDto {
     @Min(value = 0,message = "Please enter valid Customer ID")
     private int customerId;
     ////////////////////////////////////////////////////////////////////////
-    // This is Extra stuff from Master home loan application
 
     @Min(value = 0,message = "scheme id cannot be negative")
     private int schemeId;

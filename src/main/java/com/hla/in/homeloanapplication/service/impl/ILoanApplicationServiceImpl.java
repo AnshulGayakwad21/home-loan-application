@@ -77,6 +77,7 @@ public class ILoanApplicationServiceImpl implements ILoanApplicationService {
 
         Customer customer = customerRepository.findById(loanApplication.getCustomerId())
                 .orElseThrow(() -> new ResourceNotFoundException("No Customer found for the given loan"));
+
         loanApplication1.setLoanAppliedAmount(loanApplication.getLoanAppliedAmount());
         loanApplication1.setApplicationDate(loanApplication.getApplicationDate());
         loanApplication1.setTotalAnnualIncome(loanApplication.getTotalAnnualIncome());

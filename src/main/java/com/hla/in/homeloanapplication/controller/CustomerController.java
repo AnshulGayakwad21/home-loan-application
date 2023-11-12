@@ -15,6 +15,7 @@ import com.hla.in.homeloanapplication.service.impl.ICustomerServiceImpl;
 import com.hla.in.homeloanapplication.service.impl.ILoanAgreementServiceImpl;
 import com.hla.in.homeloanapplication.service.impl.ILoanApplicationServiceImpl;
 import com.hla.in.homeloanapplication.service.impl.ISchemeServiceImpl;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -45,6 +46,7 @@ public class CustomerController {
         Applying for a New Loan - /customer/apply
      */
     @PostMapping("/apply")
+    @Operation(summary = "Create New Loan Application", description = "Provide Date in dd/MM/yyyy format")
     public ResponseEntity<LoanApplication> createNewLoanApplication(@Valid @RequestBody LoanApplicationDto loanApplicationDto) throws ResourceNotFoundException, CouldNotBeAddedException {
 
         loanApplicationDto.setApplicationDate(LocalDate.now());
@@ -56,7 +58,8 @@ public class CustomerController {
     /*
         Signup a New Customer - /customer/signup/
      */
-    @PostMapping("/signup")
+    @PostMapping("/addCustomer")
+    @Operation(summary = "Create New Customer", description = "")
     public ResponseEntity<Customer> createNewCustomer(@Valid @RequestBody CustomerDto customerDto) throws CouldNotBeAddedException {
 
         Customer newCustomer = customerService.addCustomer(customerDto);
@@ -76,20 +79,22 @@ public class CustomerController {
 //    }
 
     @PutMapping("/document/{id}")
+    @Operation(summary = "Update Documents", description = "")
     public ResponseEntity<Customer> updateDocuments(@PathVariable int id, @Valid @RequestBody DocsDto docsDto) throws ResourceNotFoundException {
         Customer customer = customerService.updateCustomer(id, docsDto);
         return new ResponseEntity<>(customer, HttpStatus.CREATED);
     }
 
     @GetMapping("/loan/{loanApplicationId}")
+    @Operation(summary = "Retrieve Loan Application by ID", description = "")
     public ResponseEntity<LoanApplication> retrieveLoanApplicationById(@PathVariable Long loanApplicationId) throws ResourceNotFoundException {
-
         LoanApplication loanApplication;
         loanApplication = loanApplicationService.retrieveLoanApplicationById(loanApplicationId);
         return new ResponseEntity<>(loanApplication, HttpStatus.OK);
     }
 
     @GetMapping("/schemes")
+    @Operation(summary = "Get All Schemes", description = "")
     public ResponseEntity<List<Scheme>> getAllSchemes() {
 
         List<Scheme> schemesList = iSchemeService.getAllSchemes();
@@ -97,6 +102,7 @@ public class CustomerController {
     }
 
     @GetMapping("/loanagreement/{id}")
+    @Operation(summary = "Get Loa Agreement by ID", description = "")
     public ResponseEntity<LoanAgreement> retrieveLoanAgreementById(@PathVariable Long id) throws ResourceNotFoundException {
         LoanAgreement loanAgreement = iLoanAgreementService.retrieveAgreementById(id);
         return new ResponseEntity<>(loanAgreement, HttpStatus.OK);

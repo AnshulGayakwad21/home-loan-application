@@ -14,9 +14,8 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SchemeDto {
-    private int schemeId;
 
-    @NotNull(message = "Please provide scheme Name")
+    @NotNull(message = "Please provide New scheme Name")
     private String schemeName;
 
     @NotNull(message = "Interest Rate cannot be null")
