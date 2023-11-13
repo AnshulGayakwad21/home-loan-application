@@ -44,7 +44,7 @@ public class LandOfficerController {
     }
 
     @PutMapping("/loan/{id}")
-    @Operation(summary = "Update Status of Application bt ID", description = "")
+    @Operation(summary = "Update Status of Application by ID", description = "")
     public ResponseEntity<LoanApplication> updateStatusOfLoanApplication(@PathVariable Long id) throws ResourceNotFoundException {
         LoanApplication loanApplication = loanApplicationService.updateStatusOfLoanApplication(id, Status.WAITING_FOR_FINANCE_APPROVAL);
         return new ResponseEntity<>(loanApplication, HttpStatus.OK);
@@ -58,7 +58,6 @@ public class LandOfficerController {
         );
         return new ResponseEntity<>(pendingApplications, HttpStatus.OK);
     }
-
 //    @PostMapping("/login")
 //    public ResponseEntity<String> loginLandOfficer(@RequestBody UserLoginDto userLoginDto) throws InvalidCredentialException {
 //        String response = landVerificationService.loginLandOfficer(userLoginDto);

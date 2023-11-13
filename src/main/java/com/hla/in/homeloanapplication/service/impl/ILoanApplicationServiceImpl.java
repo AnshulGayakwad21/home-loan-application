@@ -5,6 +5,7 @@ import com.hla.in.homeloanapplication.dtos.LoanApplicationDto;
 import com.hla.in.homeloanapplication.entities.*;
 import com.hla.in.homeloanapplication.enums.Status;
 import com.hla.in.homeloanapplication.exceptions.CouldNotBeAddedException;
+import com.hla.in.homeloanapplication.exceptions.CustomerNotFoundException;
 import com.hla.in.homeloanapplication.exceptions.ResourceNotFoundException;
 import com.hla.in.homeloanapplication.repository.ICustomerRepository;
 import com.hla.in.homeloanapplication.repository.IEMIRepository;
@@ -68,6 +69,7 @@ public class ILoanApplicationServiceImpl implements ILoanApplicationService {
                 .orElseThrow(() -> new ResourceNotFoundException(notFoundMessage));
     }
 
+    @Override
     public LoanApplication addLoanApplication(@Valid LoanApplicationDto loanApplication) throws ResourceNotFoundException, CouldNotBeAddedException {
         logger.info("In addLoanApplication function in LoanApplicationServiceImpl");
         if (loanRepo.findByCustomerId(loanApplication.getCustomerId()) != null) {
@@ -120,10 +122,10 @@ public class ILoanApplicationServiceImpl implements ILoanApplicationService {
          * if status is Pending then Approve Or Reject the loan
          * else throw exception
          */
-        if (loanApplication.getStatus().equals(String.valueOf(Status.DOCUMENTS_UPLOADED))) {
+        if (loanApplication.getStatus().equals(Status.DOCUMENTS_UPLOADED)) {
             loanApplication.setStatus(Status.valueOf(String.valueOf(Status.WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL)));
             return loanRepo.save(loanApplication);
-        } else if (loanApplication.getStatus().equals(String.valueOf(Status.PENDING))) {
+        } else if (loanApplication.getStatus().equals(Status.PENDING)) {
             boolean verify = loanApplication.isLandVerificationApproval() && loanApplication.isFinanceVerificationApproval();
             loanApplication.setAdminApproval(verify);
 
@@ -144,7 +146,7 @@ public class ILoanApplicationServiceImpl implements ILoanApplicationService {
 
         EMICalculator emiCalculator = new EMICalculator(approvedAmount, loanApplication.getScheme().getInterestRate(),tenure);
 
-        emi.setEmiAmount(emiCalculator.getEMIAmount()); // find EMI using EMiclass
+        emi.setEmiAmount(emiCalculator.getEMIAmount());
 
         double interestAmount = (emi.getEmiAmount() * tenure* 12)
                 - emi.getLoanAmount(); //find interest
@@ -171,8 +173,8 @@ public class ILoanApplicationServiceImpl implements ILoanApplicationService {
     public LoanApplication updateStatusOfLoanApplication(Long loanApplicationId, Status status) throws ResourceNotFoundException {
         logger.info("In updateStatusOfLoanApplication function in LoanApplicationServiceImpl");
         LoanApplication application = loanRepo.findById(loanApplicationId)
-                .orElseThrow(() -> new ResourceNotFoundException(notFoundMessage));
-        if (application.getStatus().equals(Status.WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL.toString())) {
+                .orElseThrow(() -> new ResourceNotFoundException("Loan Application not found"));
+        if (application.getStatus().equals(Status.WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL)) {
             application.setStatus(Status.valueOf(String.valueOf(status)));
             application.setLandVerificationApproval(true);
             return loanRepo.save(application);

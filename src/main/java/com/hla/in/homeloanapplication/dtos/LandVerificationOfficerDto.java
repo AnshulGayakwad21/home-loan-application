@@ -1,5 +1,6 @@
 package com.hla.in.homeloanapplication.dtos;
 
+import io.swagger.v3.oas.annotations.Hidden;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,6 +27,7 @@ public class LandVerificationOfficerDto {
     @Pattern(regexp = "^\\d{10}$", message = "Invalid input:Enter numbers only")
     private String officeContact;
 
+    @Hidden
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int userId;
 

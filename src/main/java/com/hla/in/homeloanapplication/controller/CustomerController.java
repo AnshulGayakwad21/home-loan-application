@@ -59,7 +59,7 @@ public class CustomerController {
         Signup a New Customer - /customer/signup/
      */
     @PostMapping("/addCustomer")
-    @Operation(summary = "Create New Customer", description = "")
+    @Operation(summary = "Create New Customer", description = "Provide Date in dd/MM/yyyy format")
     public ResponseEntity<Customer> createNewCustomer(@Valid @RequestBody CustomerDto customerDto) throws CouldNotBeAddedException {
 
         Customer newCustomer = customerService.addCustomer(customerDto);
@@ -102,7 +102,7 @@ public class CustomerController {
     }
 
     @GetMapping("/loanagreement/{id}")
-    @Operation(summary = "Get Loa Agreement by ID", description = "")
+    @Operation(summary = "Get Loan Agreement by ID / View Application Status", description = "")
     public ResponseEntity<LoanAgreement> retrieveLoanAgreementById(@PathVariable Long id) throws ResourceNotFoundException {
         LoanAgreement loanAgreement = iLoanAgreementService.retrieveAgreementById(id);
         return new ResponseEntity<>(loanAgreement, HttpStatus.OK);
