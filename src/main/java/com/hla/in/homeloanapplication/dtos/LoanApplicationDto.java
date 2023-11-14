@@ -2,6 +2,7 @@ package com.hla.in.homeloanapplication.dtos;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.hla.in.homeloanapplication.enums.Status;
+import io.swagger.v3.oas.annotations.Hidden;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,23 +23,29 @@ public class LoanApplicationDto {
 //    @GeneratedValue(strategy = GenerationType.AUTO)
 //    private long applicationId;
 
+    @Hidden
     @JsonFormat(pattern="yyyy-MM-dd")
-    private LocalDate applicationDate;
+    private LocalDate applicationDate = LocalDate.now();
 
     //Customer is remaining @OneToOne relationship
 
     @Min(value = 50000,message = "Minimum home loan application value should be 50000")
     private double loanAppliedAmount;
 
-    @Min(value = 500,message = "Minimum Approved Loan value should be 500")
+    @Hidden
+    //@Min(value = 500,message = "Minimum Approved Loan value should be 500")
     private double loanApprovedAmount;
 
+    @Hidden
     private boolean landVerificationApproval;
+    @Hidden
     private boolean financeVerificationApproval;
+    @Hidden
     private boolean adminApproval;
 
+    @Hidden
     @Enumerated(EnumType.STRING)
-    private Status status;
+    private Status status = Status.PENDING;
 
     @Min(value = 0,message = "Please enter valid Customer ID")
     private int customerId;

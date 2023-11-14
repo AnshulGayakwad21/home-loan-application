@@ -1,5 +1,6 @@
 package com.hla.in.homeloanapplication.exceptions;
 
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,69 +34,136 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 		
 		return new ResponseEntity<>(map,HttpStatus.BAD_REQUEST);
 	}
+
+
+////////////////////////////////////////////////////////////////////////////////
+	//    @ExceptionHandler(EmployeeNotFoundException.class)
+	//    public ResponseEntity<String> handleEmployeeNotFoundException(EmployeeNotFoundException enfe){
+	//        return new ResponseEntity<String>(enfe.getLocalizedMessage(), HttpStatus.NOT_FOUND);
+	//    }
+///////////////////////////////////////////////////////////////////////////////
+
+
+
+
+	    @ExceptionHandler(AdminApprovalException.class)
+	    public ResponseEntity<String> handleEmployeeNotFoundException(AdminApprovalException ex){
+	        return new ResponseEntity<String>(ex.getLocalizedMessage(), HttpStatus.NOT_FOUND);
+	    }
+//	@ExceptionHandler(AdminApprovalException.class)
+//	public ResponseEntity<String> handleAdminApprovalException(AdminApprovalException ex) {
+//		HttpHeaders header = new HttpHeaders();
+//		header.add(desc, "Trying to get Admin Approval");
+//
+//		return ResponseEntity.status(HttpStatus.NOT_FOUND).headers(header).body(ex.getMessage());
+//
+//
+
+
+	    @ExceptionHandler(CustomerNotFoundException.class)
+	    public ResponseEntity<String> handleEmployeeNotFoundException(CustomerNotFoundException ex){
+	        return new ResponseEntity<String>(ex.getLocalizedMessage(), HttpStatus.NOT_FOUND);
+	    }
+//	@ExceptionHandler(CustomerNotFoundException.class)
+//	public ResponseEntity<String> handleCustomerException(CustomerNotFoundException ex) {
+//		HttpHeaders header = new HttpHeaders();
+//		header.add(desc, "Trying to get a customer");
+//
+//		return ResponseEntity.status(HttpStatus.NOT_FOUND).headers(header).body(ex.getMessage());
+//
+//	}
 	
+	////////////////////////////////////////////////////////////////////////////////////////
+	    @ExceptionHandler(FinanceVerificationException.class)
+	    public ResponseEntity<String> handleEmployeeNotFoundException(FinanceVerificationException ex){
+	        return new ResponseEntity<String>(ex.getLocalizedMessage(), HttpStatus.NOT_FOUND);
+	    }
+//	@ExceptionHandler(FinanceVerificationException.class)
+//	public ResponseEntity<String> handleFinanceException(FinanceVerificationException ex) {
+//		HttpHeaders header = new HttpHeaders();
+//		header.add(desc, "Trying to get a Finance Verification Officer");
+//
+//		return ResponseEntity.status(HttpStatus.NOT_FOUND).headers(header).body(ex.getMessage());
+//
+//	}
+	//////////////////////////////////////////////////////////////////////////////////////////
 
-	@ExceptionHandler(AdminApprovalException.class)
-	public ResponseEntity<String> handleAdminApprovalException(AdminApprovalException ex) {
-		HttpHeaders header = new HttpHeaders();
-		header.add(desc, "Trying to get Admin Approval");
 
-		return ResponseEntity.status(HttpStatus.NOT_FOUND).headers(header).body(ex.getMessage());
-		
-	}
-	
-	
-	@ExceptionHandler(CustomerNotFoundException.class)
-	public ResponseEntity<String> handleCustomerException(CustomerNotFoundException ex) {
-		HttpHeaders header = new HttpHeaders();
-		header.add(desc, "Trying to get a customer");
 
-		return ResponseEntity.status(HttpStatus.NOT_FOUND).headers(header).body(ex.getMessage());
-		
-	}
-	
-	
-	@ExceptionHandler(FinanceVerificationException.class)
-	public ResponseEntity<String> handleFinanceException(FinanceVerificationException ex) {
-		HttpHeaders header = new HttpHeaders();
-		header.add(desc, "Trying to get a Finance Verification Officer");
 
-		return ResponseEntity.status(HttpStatus.NOT_FOUND).headers(header).body(ex.getMessage());
-		
-	}
-	@ExceptionHandler(InvalidCredentialException.class)
-	public ResponseEntity<String> handleInvalidCredentialException(InvalidCredentialException ex) {
-		HttpHeaders header = new HttpHeaders();
-		header.add(desc, "Trying to get Credentials");
+	    @ExceptionHandler(InvalidCredentialException.class)
+	    public ResponseEntity<String> handleEmployeeNotFoundException(InvalidCredentialException ex){
+	        return new ResponseEntity<String>(ex.getLocalizedMessage(), HttpStatus.NOT_FOUND);
+	    }
+//	@ExceptionHandler(InvalidCredentialException.class)
+//	public ResponseEntity<String> handleInvalidCredentialException(InvalidCredentialException ex) {
+//		HttpHeaders header = new HttpHeaders();
+//		header.add(desc, "Trying to get Credentials");
+//
+//		return ResponseEntity.status(HttpStatus.NOT_FOUND).headers(header).body(ex.getMessage());
+//
+//	}
+	/////////////////////////////////////////////////////////////////////////////////////////////////
 
-		return ResponseEntity.status(HttpStatus.NOT_FOUND).headers(header).body(ex.getMessage());
-		
-	}
-	@ExceptionHandler(InvalidLoanApplicationException.class)
-	public ResponseEntity<String> handleInvalidLoanApplicationException(InvalidLoanApplicationException ex) {
-		HttpHeaders header = new HttpHeaders();
-		header.add(desc, "Trying to get Loan Application");
 
-		return ResponseEntity.status(HttpStatus.NOT_FOUND).headers(header).body(ex.getMessage());
-		
-	}
-	@ExceptionHandler(InvalidLoanAgreementException.class)
-	public ResponseEntity<String> handleInvalidLoanAgrementException(InvalidLoanAgreementException ex) {
-		HttpHeaders header = new HttpHeaders();
-		header.add(desc, "Trying to get Loan Agreement");
+	    @ExceptionHandler(InvalidLoanApplicationException.class)
+	    public ResponseEntity<String> handleEmployeeNotFoundException(InvalidLoanApplicationException ex){
+	        return new ResponseEntity<String>(ex.getLocalizedMessage(), HttpStatus.NOT_FOUND);
+	    }
+//	@ExceptionHandler(InvalidLoanApplicationException.class)
+//	public ResponseEntity<String> handleInvalidLoanApplicationException(InvalidLoanApplicationException ex) {
+//		HttpHeaders header = new HttpHeaders();
+//		header.add(desc, "Trying to get Loan Application");
+//
+//		return ResponseEntity.status(HttpStatus.NOT_FOUND).headers(header).body(ex.getMessage());
+//
+//	}
+	///////////////////////////////////////////////////////////////////////////////////////////////////
 
-		return ResponseEntity.status(HttpStatus.NOT_FOUND).headers(header).body(ex.getMessage());
-		
-	}
 
-	@ExceptionHandler(LandVerificationException.class)
-	public ResponseEntity<String> handleLandException(LandVerificationException ex) {
-		HttpHeaders header = new HttpHeaders();
-		header.add(desc, "Trying to get a Land Verification Officer");
 
-		return ResponseEntity.status(HttpStatus.NOT_FOUND).headers(header).build();
-		
-	}
-	
+
+	    @ExceptionHandler(InvalidLoanAgreementException.class)
+	    public ResponseEntity<String> handleEmployeeNotFoundException(InvalidLoanAgreementException ex){
+	        return new ResponseEntity<String>(ex.getLocalizedMessage(), HttpStatus.NOT_FOUND);
+	    }
+
+//	@ExceptionHandler(InvalidLoanAgreementException.class)
+//	public ResponseEntity<String> handleInvalidLoanAgrementException(InvalidLoanAgreementException ex) {
+//		HttpHeaders header = new HttpHeaders();
+//		header.add(desc, "Trying to get Loan Agreement");
+//
+//		return ResponseEntity.status(HttpStatus.NOT_FOUND).headers(header).body(ex.getMessage());
+//
+//	}
+	//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	    @ExceptionHandler(LandVerificationException.class)
+	    public ResponseEntity<String> handleEmployeeNotFoundException(LandVerificationException ex){
+	        return new ResponseEntity<String>(ex.getLocalizedMessage(), HttpStatus.NOT_FOUND);
+	    }
+
+//	@ExceptionHandler(LandVerificationException.class)
+//	public ResponseEntity<String> handleLandException(LandVerificationException ex) {
+//		HttpHeaders header = new HttpHeaders();
+//		header.add(desc, "Trying to get a Land Verification Officer");
+//
+//		return ResponseEntity.status(HttpStatus.NOT_FOUND).headers(header).build();
+//
+//	}
+	/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+	    @ExceptionHandler(CouldNotBeAddedException.class)
+	    public ResponseEntity<String> handleEmployeeNotFoundException(CouldNotBeAddedException ex){
+	        return new ResponseEntity<String>(ex.getLocalizedMessage(), HttpStatus.NOT_FOUND);
+	    }
+
+	    @ExceptionHandler(ResourceNotFoundException.class)
+	    public ResponseEntity<String> handleEmployeeNotFoundException(ResourceNotFoundException ex){
+	        return new ResponseEntity<String>(ex.getLocalizedMessage(), HttpStatus.NOT_FOUND);
+	    }
 
 }

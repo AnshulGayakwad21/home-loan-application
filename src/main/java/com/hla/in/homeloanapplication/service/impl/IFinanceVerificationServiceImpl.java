@@ -63,7 +63,7 @@ public class IFinanceVerificationServiceImpl implements IFinanceVerificationServ
 
         LoanApplication loanApplicationOp = loanApplicationRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("User Not found for Id " + id));
-        if (loanApplicationOp.getStatus().equals(Status.WAITING_FOR_FINANCE_APPROVAL.toString())) {
+        if (loanApplicationOp.getStatus().equals(Status.WAITING_FOR_FINANCE_APPROVAL)) {
             LoanApplication loanApplication = loanApplicationOp;
             HomeLoanBorrowingAmountCalculator homeLoanBorrowingAmountCalculator =
                     new HomeLoanBorrowingAmountCalculator(loanApplication.getLoanAppliedAmount()
