@@ -15,6 +15,7 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 public class SchemeDto {
 
+    @NotEmpty(message = "Please enter a scheme name")
     @NotNull(message = "Please provide New scheme Name")
     private String schemeName;
 

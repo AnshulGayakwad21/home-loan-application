@@ -59,7 +59,7 @@ public class AdminController {
     }
 
     @GetMapping("/users/{date}")
-    @Operation(summary = "View Customer List ", description = "On the Basic if Date")
+    @Operation(summary = "View Customer List By Date", description = "On the Basic of Date -> Input Date in 'yyyy-MM-dd' format")
     public ResponseEntity<List<Customer>> viewCustomerList(@PathVariable String date) throws ResourceNotFoundException{
         List<Customer> customers = customerService.viewCustomerList(date);
         return new ResponseEntity<>(customers, HttpStatus.OK);
@@ -115,7 +115,7 @@ public class AdminController {
     }
 
     @PutMapping("application/document/{id}")
-    @Operation(summary = "Raise Land Officer Ticket", description = "")
+    @Operation(summary = "Raise New Ticket By Loan Application ID", description = "")
     public ResponseEntity<LoanApplication> raiseLandOfficerTicket(@PathVariable long id) throws ResourceNotFoundException{
         LoanApplication  savedLoanApplication = loanApplicationService.updateLoanApplication(id);
         return new ResponseEntity<>( savedLoanApplication, HttpStatus.OK);
