@@ -186,6 +186,24 @@ public class ILoanApplicationServiceImpl implements ILoanApplicationService {
     @Override
     public List<LoanApplication> retrieveLoanApplicationByStatus(String status) {
         logger.info("In retrieveLoanApplicationByStatus function in LoanApplicationServiceImpl");
-        return loanRepo.findByStatus(status);
+        Status penStatus;
+        if(status.equals("WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL")){
+            penStatus = Status.WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL;
+        } else if (status.equals("PENDING")) {
+            penStatus = Status.PENDING;
+        }
+        else if(status.equals("WAITING_FOR_FINANCE_APPROVAL")){
+            penStatus= Status.WAITING_FOR_FINANCE_APPROVAL;
+        }
+        else if(status.equals("APPROVED")){
+            penStatus = Status.APPROVED;
+        }
+        else if(status.equals("DOCUMENTS_UPLOADED")){
+            penStatus = Status.DOCUMENTS_UPLOADED;
+        }
+        else {
+            penStatus = Status.REJECTED;
+        }
+        return loanRepo.findByStatus(penStatus);
     }
 }

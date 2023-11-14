@@ -52,10 +52,12 @@ public class LandOfficerController {
 
     @GetMapping("/loans/pending")
     @Operation(summary = "Get All Pending Applications", description = "")
-    public ResponseEntity<List<LoanApplication>> getPendingApplications() {
-        List<LoanApplication> pendingApplications = loanApplicationService.retrieveLoanApplicationByStatus(
-                String.valueOf(Status.WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL)
-        );
+    public ResponseEntity<List<LoanApplication>> getPendingApplications() throws ResourceNotFoundException {
+        String str = "WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL";
+        List<LoanApplication> pendingApplications = loanApplicationService.retrieveLoanApplicationByStatus(str);
+        if(pendingApplications == null) {
+            throw new ResourceNotFoundException("List is Empty");
+        }
         return new ResponseEntity<>(pendingApplications, HttpStatus.OK);
     }
 //    @PostMapping("/login")

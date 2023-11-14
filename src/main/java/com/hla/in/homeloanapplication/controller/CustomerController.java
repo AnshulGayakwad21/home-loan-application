@@ -102,7 +102,7 @@ public class CustomerController {
     }
 
     @GetMapping("/loanagreement/{id}")
-    @Operation(summary = "Get Loan Agreement by ID / View Application Status", description = "")
+    @Operation(summary = "Get Loan Agreement by ID / View Agreement Status by Agreement ID", description = "")
     public ResponseEntity<LoanAgreement> retrieveLoanAgreementById(@PathVariable Long id) throws ResourceNotFoundException {
         LoanAgreement loanAgreement = iLoanAgreementService.retrieveAgreementById(id);
         return new ResponseEntity<>(loanAgreement, HttpStatus.OK);

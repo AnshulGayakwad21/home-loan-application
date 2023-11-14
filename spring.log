@@ -1,144 +1,29 @@
-2023-11-13 00:28:57.989  WARN 14056 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45m6s696ms55µs600ns).
-2023-11-13 00:30:17.101  INFO 14056 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 00:30:17.103  INFO 14056 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-11-13 00:30:17.110  INFO 14056 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-11-13 00:32:23.991  INFO 18556 --- [main] c.h.i.h.HomeLoanApplication              : Starting HomeLoanApplication using Java 19.0.2 on LIN-1TJT7G3 with PID 18556 (C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application\target\classes started by angayakw in C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application)
-2023-11-13 00:32:23.994  INFO 18556 --- [main] c.h.i.h.HomeLoanApplication              : No active profile set, falling back to 1 default profile: "default"
-2023-11-13 00:32:24.701  INFO 18556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-13 00:32:24.790  INFO 18556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 9 JPA repository interfaces.
-2023-11-13 00:32:25.330  INFO 18556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-2023-11-13 00:32:25.337  INFO 18556 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-13 00:32:25.338  INFO 18556 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2023-11-13 00:32:25.448  INFO 18556 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-13 00:32:25.449  INFO 18556 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1406 ms
-2023-11-13 00:32:25.583  INFO 18556 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-13 00:32:25.623  INFO 18556 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2023-11-13 00:32:25.750  INFO 18556 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-11-13 00:32:25.868  INFO 18556 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-13 00:32:26.053  INFO 18556 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-13 00:32:26.081  INFO 18556 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2023-11-13 00:32:26.847  INFO 18556 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-13 00:32:26.856  INFO 18556 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 00:32:27.625  WARN 18556 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-13 00:32:28.692  INFO 18556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
-2023-11-13 00:32:28.704  INFO 18556 --- [main] c.h.i.h.HomeLoanApplication              : Started HomeLoanApplication in 5.168 seconds (JVM running for 5.59)
-2023-11-13 00:32:36.521  INFO 18556 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-13 00:32:36.522  INFO 18556 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-13 00:32:36.523  INFO 18556 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-11-13 00:32:37.515  INFO 18556 --- [http-nio-8085-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 632 ms
-2023-11-13 00:34:44.058  INFO 18556 --- [http-nio-8085-exec-7] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In retrieveLoanApplicationById function in LoanApplicationServiceImpl
-2023-11-13 00:35:34.763  INFO 18556 --- [http-nio-8085-exec-8] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In updateStatusOfLoanApplication function in LoanApplicationServiceImpl
-2023-11-13 00:35:34.772 ERROR 18556 --- [http-nio-8085-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.hla.in.homeloanapplication.exceptions.ResourceNotFoundException: This application is not under your authority] with root cause
-
-com.hla.in.homeloanapplication.exceptions.ResourceNotFoundException: This application is not under your authority
-	at com.hla.in.homeloanapplication.service.impl.ILoanApplicationServiceImpl.updateStatusOfLoanApplication(ILoanApplicationServiceImpl.java:182) ~[classes/:na]
-	at com.hla.in.homeloanapplication.controller.LandOfficerController.updateStatusOfLoanApplication(LandOfficerController.java:49) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:558) ~[tomcat-embed-core-9.0.82.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.82.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
-
-2023-11-13 00:39:37.714  INFO 18556 --- [http-nio-8085-exec-9] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In updateStatusOfLoanApplication function in LoanApplicationServiceImpl
-2023-11-13 00:39:37.719 ERROR 18556 --- [http-nio-8085-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.hla.in.homeloanapplication.exceptions.ResourceNotFoundException: This application is not under your authority] with root cause
-
-com.hla.in.homeloanapplication.exceptions.ResourceNotFoundException: This application is not under your authority
-	at com.hla.in.homeloanapplication.service.impl.ILoanApplicationServiceImpl.updateStatusOfLoanApplication(ILoanApplicationServiceImpl.java:182) ~[classes/:na]
-	at com.hla.in.homeloanapplication.controller.LandOfficerController.updateStatusOfLoanApplication(LandOfficerController.java:49) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:558) ~[tomcat-embed-core-9.0.82.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.82.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
-
-2023-11-13 00:40:12.807  INFO 18556 --- [http-nio-8085-exec-10] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In retrieveLoanApplicationByStatus function in LoanApplicationServiceImpl
-2023-11-13 00:40:12.828 ERROR 18556 --- [http-nio-8085-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: Parameter value [WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]; nested exception is java.lang.IllegalArgumentException: Parameter value [WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]] with root cause
+2023-11-14 00:07:20.817  INFO 6360 --- [main] c.h.i.h.HomeLoanApplication              : Starting HomeLoanApplication using Java 19.0.2 on LIN-1TJT7G3 with PID 6360 (C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application\target\classes started by angayakw in C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application)
+2023-11-14 00:07:20.837  INFO 6360 --- [main] c.h.i.h.HomeLoanApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-11-14 00:07:21.806  INFO 6360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-14 00:07:21.906  INFO 6360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 9 JPA repository interfaces.
+2023-11-14 00:07:22.584  INFO 6360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2023-11-14 00:07:22.597  INFO 6360 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-14 00:07:22.597  INFO 6360 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-14 00:07:22.735  INFO 6360 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-14 00:07:22.736  INFO 6360 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1836 ms
+2023-11-14 00:07:22.922  INFO 6360 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-14 00:07:22.992  INFO 6360 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-11-14 00:07:23.209  INFO 6360 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-14 00:07:23.336  INFO 6360 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-14 00:07:23.563  INFO 6360 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-14 00:07:23.591  INFO 6360 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-14 00:07:24.585  INFO 6360 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-14 00:07:24.596  INFO 6360 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-14 00:07:25.439  WARN 6360 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-14 00:07:26.597  INFO 6360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2023-11-14 00:07:26.611  INFO 6360 --- [main] c.h.i.h.HomeLoanApplication              : Started HomeLoanApplication in 6.365 seconds (JVM running for 6.866)
+2023-11-14 00:08:53.575  INFO 6360 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-14 00:08:53.576  INFO 6360 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-14 00:08:53.578  INFO 6360 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-11-14 00:08:54.812  INFO 6360 --- [http-nio-8085-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 828 ms
+2023-11-14 00:09:04.271  INFO 6360 --- [http-nio-8085-exec-5] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In retrieveLoanApplicationByStatus function in LoanApplicationServiceImpl
+2023-11-14 00:09:04.305 ERROR 6360 --- [http-nio-8085-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: Parameter value [WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]; nested exception is java.lang.IllegalArgumentException: Parameter value [WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]] with root cause
 
 java.lang.IllegalArgumentException: Parameter value [WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]
 	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:54) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
@@ -184,7 +69,7 @@ java.lang.IllegalArgumentException: Parameter value [WAITING_FOR_LAND_VERIFICATI
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241) ~[spring-aop-5.3.30.jar:5.3.30]
 	at jdk.proxy2/jdk.proxy2.$Proxy127.findByStatus(Unknown Source) ~[na:na]
 	at com.hla.in.homeloanapplication.service.impl.ILoanApplicationServiceImpl.retrieveLoanApplicationByStatus(ILoanApplicationServiceImpl.java:189) ~[classes/:na]
-	at com.hla.in.homeloanapplication.controller.LandOfficerController.getPendingApplications(LandOfficerController.java:56) ~[classes/:na]
+	at com.hla.in.homeloanapplication.controller.LandOfficerController.getPendingApplications(LandOfficerController.java:57) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.30.jar:5.3.30]
@@ -234,566 +119,9 @@ java.lang.IllegalArgumentException: Parameter value [WAITING_FOR_LAND_VERIFICATI
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
 	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
 
-2023-11-13 00:50:51.608  INFO 18556 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 00:50:51.610  INFO 18556 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-11-13 00:50:51.613  INFO 18556 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-11-13 12:02:10.501  INFO 22892 --- [main] c.h.i.h.HomeLoanApplication              : Starting HomeLoanApplication using Java 19.0.2 on LIN-1TJT7G3 with PID 22892 (C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application\target\classes started by angayakw in C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application)
-2023-11-13 12:02:10.505  INFO 22892 --- [main] c.h.i.h.HomeLoanApplication              : No active profile set, falling back to 1 default profile: "default"
-2023-11-13 12:02:11.511  INFO 22892 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-13 12:02:11.605  INFO 22892 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 9 JPA repository interfaces.
-2023-11-13 12:02:12.234  INFO 22892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-2023-11-13 12:02:12.243  INFO 22892 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-13 12:02:12.243  INFO 22892 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2023-11-13 12:02:12.357  INFO 22892 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-13 12:02:12.358  INFO 22892 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1787 ms
-2023-11-13 12:02:12.537  INFO 22892 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-13 12:02:12.597  INFO 22892 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2023-11-13 12:02:12.771  INFO 22892 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-11-13 12:02:12.890  INFO 22892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-13 12:02:13.093  INFO 22892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-13 12:02:13.122  INFO 22892 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2023-11-13 12:02:14.312  INFO 22892 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-13 12:02:14.332  INFO 22892 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 12:02:15.292  WARN 22892 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-13 12:02:16.578  INFO 22892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
-2023-11-13 12:02:16.591  INFO 22892 --- [main] c.h.i.h.HomeLoanApplication              : Started HomeLoanApplication in 6.63 seconds (JVM running for 7.109)
-2023-11-13 12:02:27.124  INFO 22892 --- [http-nio-8085-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-13 12:02:27.124  INFO 22892 --- [http-nio-8085-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-13 12:02:27.125  INFO 22892 --- [http-nio-8085-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2023-11-13 12:02:28.312  INFO 22892 --- [http-nio-8085-exec-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 816 ms
-2023-11-13 12:03:33.050  INFO 22892 --- [http-nio-8085-exec-9] c.h.i.h.s.i.ILoanAgreementServiceImpl    : Entered into addCustomer method
-2023-11-13 12:05:09.542  INFO 22892 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 12:05:09.543  INFO 22892 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-11-13 12:05:09.548  INFO 22892 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-11-13 12:27:20.887  INFO 9320 --- [main] c.h.i.h.HomeLoanApplication              : Starting HomeLoanApplication using Java 19.0.2 on LIN-1TJT7G3 with PID 9320 (C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application\target\classes started by angayakw in C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application)
-2023-11-13 12:27:20.891  INFO 9320 --- [main] c.h.i.h.HomeLoanApplication              : No active profile set, falling back to 1 default profile: "default"
-2023-11-13 12:27:21.637  INFO 9320 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-13 12:27:21.737  INFO 9320 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 9 JPA repository interfaces.
-2023-11-13 12:27:22.365  INFO 9320 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-2023-11-13 12:27:22.373  INFO 9320 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-13 12:27:22.374  INFO 9320 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2023-11-13 12:27:22.479  INFO 9320 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-13 12:27:22.479  INFO 9320 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1532 ms
-2023-11-13 12:27:22.617  INFO 9320 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-13 12:27:22.654  INFO 9320 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2023-11-13 12:27:22.778  INFO 9320 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-11-13 12:27:22.899  INFO 9320 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-13 12:27:23.099  INFO 9320 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-13 12:27:23.133  INFO 9320 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2023-11-13 12:27:24.033  INFO 9320 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-13 12:27:24.045  INFO 9320 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 12:27:24.821  WARN 9320 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-13 12:27:25.957  INFO 9320 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
-2023-11-13 12:27:25.969  INFO 9320 --- [main] c.h.i.h.HomeLoanApplication              : Started HomeLoanApplication in 5.557 seconds (JVM running for 5.995)
-2023-11-13 12:28:20.125  INFO 9320 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-13 12:28:20.125  INFO 9320 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-13 12:28:20.127  INFO 9320 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-11-13 12:28:51.085  INFO 9320 --- [http-nio-8085-exec-2] c.h.i.h.s.i.ILoanAgreementServiceImpl    : Entered into addCustomer method
-2023-11-13 12:28:51.098 ERROR 9320 --- [http-nio-8085-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.time.format.DateTimeParseException: Text 'string' could not be parsed at index 0] with root cause
-
-java.time.format.DateTimeParseException: Text 'string' could not be parsed at index 0
-	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2106) ~[na:na]
-	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:2008) ~[na:na]
-	at java.base/java.time.LocalDate.parse(LocalDate.java:435) ~[na:na]
-	at com.hla.in.homeloanapplication.service.impl.ICustomerServiceImpl.addCustomer(ICustomerServiceImpl.java:87) ~[classes/:na]
-	at com.hla.in.homeloanapplication.controller.CustomerController.createNewCustomer(CustomerController.java:65) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) ~[tomcat-embed-core-9.0.82.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.82.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
-
-2023-11-13 12:29:20.686  INFO 9320 --- [http-nio-8085-exec-3] c.h.i.h.s.i.ILoanAgreementServiceImpl    : Entered into addCustomer method
-2023-11-13 12:30:51.927  INFO 9320 --- [http-nio-8085-exec-5] c.h.i.h.s.i.ILoanAgreementServiceImpl    : Entered into deleteCustomerById method
-2023-11-13 12:32:05.976  INFO 9320 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 12:32:05.978  INFO 9320 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-11-13 12:32:05.987  INFO 9320 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-11-13 13:14:48.301  INFO 18440 --- [main] c.h.i.h.HomeLoanApplication              : Starting HomeLoanApplication using Java 19.0.2 on LIN-1TJT7G3 with PID 18440 (C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application\target\classes started by angayakw in C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application)
-2023-11-13 13:14:48.305  INFO 18440 --- [main] c.h.i.h.HomeLoanApplication              : No active profile set, falling back to 1 default profile: "default"
-2023-11-13 13:14:49.794  INFO 18440 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-13 13:14:49.948  INFO 18440 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 137 ms. Found 9 JPA repository interfaces.
-2023-11-13 13:14:50.935  INFO 18440 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-2023-11-13 13:14:50.949  INFO 18440 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-13 13:14:50.950  INFO 18440 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2023-11-13 13:14:51.115  INFO 18440 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-13 13:14:51.115  INFO 18440 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2721 ms
-2023-11-13 13:14:51.358  INFO 18440 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-13 13:14:51.424  INFO 18440 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2023-11-13 13:14:51.609  INFO 18440 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-11-13 13:14:51.727  INFO 18440 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-13 13:14:51.959  INFO 18440 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-13 13:14:51.996  INFO 18440 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2023-11-13 13:14:53.329  INFO 18440 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-13 13:14:53.339  INFO 18440 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 13:14:54.234  WARN 18440 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-13 13:14:55.671  INFO 18440 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
-2023-11-13 13:14:55.682  INFO 18440 --- [main] c.h.i.h.HomeLoanApplication              : Started HomeLoanApplication in 8.213 seconds (JVM running for 9.174)
-2023-11-13 13:17:11.223  INFO 18440 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-13 13:17:11.224  INFO 18440 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-13 13:17:11.225  INFO 18440 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-11-13 13:17:11.260  INFO 18440 --- [http-nio-8085-exec-1] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In updateStatusOfLoanApplication function in LoanApplicationServiceImpl
-2023-11-13 13:17:11.301 ERROR 18440 --- [http-nio-8085-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.hla.in.homeloanapplication.exceptions.ResourceNotFoundException: Loan Application not found] with root cause
-
-com.hla.in.homeloanapplication.exceptions.ResourceNotFoundException: Loan Application not found
-	at com.hla.in.homeloanapplication.service.impl.ILoanApplicationServiceImpl.lambda$updateStatusOfLoanApplication$5(ILoanApplicationServiceImpl.java:176) ~[classes/:na]
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
-	at com.hla.in.homeloanapplication.service.impl.ILoanApplicationServiceImpl.updateStatusOfLoanApplication(ILoanApplicationServiceImpl.java:176) ~[classes/:na]
-	at com.hla.in.homeloanapplication.controller.LandOfficerController.updateStatusOfLoanApplication(LandOfficerController.java:49) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:558) ~[tomcat-embed-core-9.0.82.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.82.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
-
-2023-11-13 13:18:25.851  INFO 18440 --- [http-nio-8085-exec-3] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In updateStatusOfLoanApplication function in LoanApplicationServiceImpl
-2023-11-13 13:18:25.879 ERROR 18440 --- [http-nio-8085-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.hla.in.homeloanapplication.exceptions.ResourceNotFoundException: This application is not under your authority] with root cause
-
-com.hla.in.homeloanapplication.exceptions.ResourceNotFoundException: This application is not under your authority
-	at com.hla.in.homeloanapplication.service.impl.ILoanApplicationServiceImpl.updateStatusOfLoanApplication(ILoanApplicationServiceImpl.java:182) ~[classes/:na]
-	at com.hla.in.homeloanapplication.controller.LandOfficerController.updateStatusOfLoanApplication(LandOfficerController.java:49) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:558) ~[tomcat-embed-core-9.0.82.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.82.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
-
-2023-11-13 14:20:46.575  INFO 18440 --- [http-nio-8085-exec-4] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In updateLoanApplication function in LoanApplicationServiceImpl
-2023-11-13 14:20:46.583 ERROR 18440 --- [http-nio-8085-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.hla.in.homeloanapplication.exceptions.ResourceNotFoundException: The application is still under processing stage] with root cause
-
-com.hla.in.homeloanapplication.exceptions.ResourceNotFoundException: The application is still under processing stage
-	at com.hla.in.homeloanapplication.service.impl.ILoanApplicationServiceImpl.updateLoanApplication(ILoanApplicationServiceImpl.java:135) ~[classes/:na]
-	at com.hla.in.homeloanapplication.controller.AdminController.raiseLandOfficerTicket(AdminController.java:120) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:558) ~[tomcat-embed-core-9.0.82.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.82.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
-
-2023-11-13 14:28:13.145  INFO 18440 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 14:28:13.147  INFO 18440 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-11-13 14:28:13.160  INFO 18440 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-11-13 15:02:01.650  INFO 16656 --- [main] c.h.i.h.HomeLoanApplication              : Starting HomeLoanApplication using Java 19.0.2 on LIN-1TJT7G3 with PID 16656 (C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application\target\classes started by angayakw in C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application)
-2023-11-13 15:02:01.652  INFO 16656 --- [main] c.h.i.h.HomeLoanApplication              : No active profile set, falling back to 1 default profile: "default"
-2023-11-13 15:02:02.439  INFO 16656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-13 15:02:02.532  INFO 16656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 9 JPA repository interfaces.
-2023-11-13 15:02:03.113  INFO 16656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-2023-11-13 15:02:03.123  INFO 16656 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-13 15:02:03.124  INFO 16656 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2023-11-13 15:02:03.246  INFO 16656 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-13 15:02:03.246  INFO 16656 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1543 ms
-2023-11-13 15:02:03.403  INFO 16656 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-13 15:02:03.464  INFO 16656 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2023-11-13 15:02:03.638  INFO 16656 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-11-13 15:02:03.754  INFO 16656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-13 15:02:04.068  INFO 16656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-13 15:02:04.100  INFO 16656 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2023-11-13 15:02:04.958  INFO 16656 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-13 15:02:04.968  INFO 16656 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 15:02:05.787  WARN 16656 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-13 15:02:06.903  INFO 16656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
-2023-11-13 15:02:06.914  INFO 16656 --- [main] c.h.i.h.HomeLoanApplication              : Started HomeLoanApplication in 5.724 seconds (JVM running for 6.173)
-2023-11-13 15:03:42.281  INFO 16656 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-13 15:03:42.281  INFO 16656 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-13 15:03:42.282  INFO 16656 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-11-13 15:03:43.216  INFO 16656 --- [http-nio-8085-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 562 ms
-2023-11-13 15:05:56.863  INFO 16656 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 15:05:56.865  INFO 16656 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-11-13 15:05:56.873  INFO 16656 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-11-13 15:06:27.843  INFO 17260 --- [main] c.h.i.h.HomeLoanApplicationTests         : Starting HomeLoanApplicationTests using Java 19.0.2 on LIN-1TJT7G3 with PID 17260 (started by angayakw in C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application)
-2023-11-13 15:06:27.845  INFO 17260 --- [main] c.h.i.h.HomeLoanApplicationTests         : No active profile set, falling back to 1 default profile: "default"
-2023-11-13 15:06:28.558  INFO 17260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-13 15:06:28.634  INFO 17260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 9 JPA repository interfaces.
-2023-11-13 15:06:29.151  INFO 17260 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-13 15:06:29.200  INFO 17260 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2023-11-13 15:06:29.361  INFO 17260 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-11-13 15:06:29.525  INFO 17260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-13 15:06:29.731  INFO 17260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-13 15:06:29.759  INFO 17260 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2023-11-13 15:06:30.671  INFO 17260 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-13 15:06:30.680  INFO 17260 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 15:06:31.789  WARN 17260 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-13 15:06:33.412  INFO 17260 --- [main] c.h.i.h.HomeLoanApplicationTests         : Started HomeLoanApplicationTests in 5.879 seconds (JVM running for 6.689)
-2023-11-13 15:06:33.620  INFO 17260 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 15:06:33.622  INFO 17260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-11-13 15:06:33.633  INFO 17260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-11-13 15:08:14.417  INFO 13980 --- [main] c.h.i.h.HomeLoanApplication              : Starting HomeLoanApplication using Java 19.0.2 on LIN-1TJT7G3 with PID 13980 (C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application\target\classes started by angayakw in C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application)
-2023-11-13 15:08:14.420  INFO 13980 --- [main] c.h.i.h.HomeLoanApplication              : No active profile set, falling back to 1 default profile: "default"
-2023-11-13 15:08:15.177  INFO 13980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-13 15:08:15.270  INFO 13980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 9 JPA repository interfaces.
-2023-11-13 15:08:15.832  INFO 13980 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-2023-11-13 15:08:15.842  INFO 13980 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-13 15:08:15.842  INFO 13980 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2023-11-13 15:08:15.948  INFO 13980 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-13 15:08:15.949  INFO 13980 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1482 ms
-2023-11-13 15:08:16.086  INFO 13980 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-13 15:08:16.123  INFO 13980 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2023-11-13 15:08:16.249  INFO 13980 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-11-13 15:08:16.359  INFO 13980 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-13 15:08:16.551  INFO 13980 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-13 15:08:16.581  INFO 13980 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2023-11-13 15:08:17.429  INFO 13980 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-13 15:08:17.438  INFO 13980 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 15:08:18.579  WARN 13980 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-13 15:08:19.668  INFO 13980 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
-2023-11-13 15:08:19.677  INFO 13980 --- [main] c.h.i.h.HomeLoanApplication              : Started HomeLoanApplication in 5.746 seconds (JVM running for 6.287)
-2023-11-13 15:11:04.734  INFO 13980 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-13 15:11:04.735  INFO 13980 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-13 15:11:04.737  INFO 13980 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-11-13 15:11:04.766  INFO 13980 --- [http-nio-8085-exec-1] c.h.i.h.service.impl.ISchemeServiceImpl  : Entered in SchemeById method in ISchemeServiceClass
-2023-11-13 15:11:14.813  INFO 13980 --- [http-nio-8085-exec-2] c.h.i.h.service.impl.ISchemeServiceImpl  : Entered in SchemeById method in ISchemeServiceClass
-2023-11-13 15:17:57.778  INFO 13980 --- [http-nio-8085-exec-4] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In addLoanApplication function in LoanApplicationServiceImpl
-2023-11-13 15:18:17.401  INFO 13980 --- [http-nio-8085-exec-5] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In addLoanApplication function in LoanApplicationServiceImpl
-2023-11-13 15:19:01.385  INFO 13980 --- [http-nio-8085-exec-6] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In addLoanApplication function in LoanApplicationServiceImpl
-2023-11-13 15:19:09.046  INFO 13980 --- [http-nio-8085-exec-7] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In addLoanApplication function in LoanApplicationServiceImpl
-2023-11-13 15:22:01.222  INFO 13980 --- [http-nio-8085-exec-9] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In updateLoanApplication function in LoanApplicationServiceImpl
-2023-11-13 15:36:16.779  INFO 13980 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 15:36:16.781  INFO 13980 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-11-13 15:36:16.787  INFO 13980 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-11-13 16:30:19.671  INFO 11836 --- [main] c.h.i.h.HomeLoanApplication              : Starting HomeLoanApplication using Java 19.0.2 on LIN-1TJT7G3 with PID 11836 (C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application\target\classes started by angayakw in C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application)
-2023-11-13 16:30:19.673  INFO 11836 --- [main] c.h.i.h.HomeLoanApplication              : No active profile set, falling back to 1 default profile: "default"
-2023-11-13 16:30:20.577  INFO 11836 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-13 16:30:20.672  INFO 11836 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 9 JPA repository interfaces.
-2023-11-13 16:30:21.222  INFO 11836 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-2023-11-13 16:30:21.231  INFO 11836 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-13 16:30:21.231  INFO 11836 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2023-11-13 16:30:21.335  INFO 11836 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-13 16:30:21.336  INFO 11836 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1611 ms
-2023-11-13 16:30:21.489  INFO 11836 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-13 16:30:21.533  INFO 11836 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2023-11-13 16:30:21.680  INFO 11836 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-11-13 16:30:21.789  INFO 11836 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-13 16:30:21.979  INFO 11836 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-13 16:30:22.013  INFO 11836 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2023-11-13 16:30:22.854  INFO 11836 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-13 16:30:22.865  INFO 11836 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 16:30:23.620  WARN 11836 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-13 16:30:24.877  INFO 11836 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
-2023-11-13 16:30:24.886  INFO 11836 --- [main] c.h.i.h.HomeLoanApplication              : Started HomeLoanApplication in 5.713 seconds (JVM running for 6.205)
-2023-11-13 16:30:33.595  INFO 11836 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-13 16:30:33.595  INFO 11836 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-13 16:30:33.596  INFO 11836 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-11-13 16:30:34.529  INFO 11836 --- [http-nio-8085-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 612 ms
-2023-11-13 16:32:29.736  INFO 11836 --- [http-nio-8085-exec-7] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In retrieveAllLoanApplication function in LoanApplicationServiceImpl
-2023-11-13 16:32:58.051  INFO 11836 --- [http-nio-8085-exec-8] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In updateLoanApplication function in LoanApplicationServiceImpl
-2023-11-13 16:33:52.875  INFO 11836 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 16:33:52.876  INFO 11836 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-11-13 16:33:52.893  INFO 11836 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-11-13 17:04:29.577  INFO 17792 --- [main] c.h.i.h.HomeLoanApplication              : Starting HomeLoanApplication using Java 19.0.2 on LIN-1TJT7G3 with PID 17792 (C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application\target\classes started by angayakw in C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application)
-2023-11-13 17:04:29.579  INFO 17792 --- [main] c.h.i.h.HomeLoanApplication              : No active profile set, falling back to 1 default profile: "default"
-2023-11-13 17:04:30.322  INFO 17792 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-13 17:04:30.412  INFO 17792 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 9 JPA repository interfaces.
-2023-11-13 17:04:30.941  INFO 17792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-2023-11-13 17:04:30.950  INFO 17792 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-13 17:04:30.950  INFO 17792 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2023-11-13 17:04:31.062  INFO 17792 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-13 17:04:31.062  INFO 17792 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1429 ms
-2023-11-13 17:04:31.220  INFO 17792 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-13 17:04:31.259  INFO 17792 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2023-11-13 17:04:31.392  INFO 17792 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-11-13 17:04:31.504  INFO 17792 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-13 17:04:31.688  INFO 17792 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-13 17:04:31.717  INFO 17792 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2023-11-13 17:04:32.499  INFO 17792 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-13 17:04:32.507  INFO 17792 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 17:04:33.468  WARN 17792 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-13 17:04:34.663  INFO 17792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
-2023-11-13 17:04:34.674  INFO 17792 --- [main] c.h.i.h.HomeLoanApplication              : Started HomeLoanApplication in 5.555 seconds (JVM running for 6.022)
-2023-11-13 17:07:08.893  INFO 17792 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 17:07:08.895  INFO 17792 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-11-13 17:07:08.900  INFO 17792 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-11-13 17:27:22.854  INFO 27720 --- [main] c.h.i.h.HomeLoanApplication              : Starting HomeLoanApplication using Java 19.0.2 on LIN-1TJT7G3 with PID 27720 (C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application\target\classes started by angayakw in C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application)
-2023-11-13 17:27:22.857  INFO 27720 --- [main] c.h.i.h.HomeLoanApplication              : No active profile set, falling back to 1 default profile: "default"
-2023-11-13 17:27:23.635  INFO 27720 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-13 17:27:23.724  INFO 27720 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 9 JPA repository interfaces.
-2023-11-13 17:27:24.257  INFO 27720 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-2023-11-13 17:27:24.267  INFO 27720 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-13 17:27:24.267  INFO 27720 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2023-11-13 17:27:24.367  INFO 27720 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-13 17:27:24.368  INFO 27720 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1460 ms
-2023-11-13 17:27:24.509  INFO 27720 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-13 17:27:24.550  INFO 27720 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2023-11-13 17:27:24.684  INFO 27720 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-11-13 17:27:24.797  INFO 27720 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-13 17:27:24.982  INFO 27720 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-13 17:27:25.016  INFO 27720 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2023-11-13 17:27:25.904  INFO 27720 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-13 17:27:25.914  INFO 27720 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 17:27:26.708  WARN 27720 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-13 17:27:27.778  INFO 27720 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
-2023-11-13 17:27:27.789  INFO 27720 --- [main] c.h.i.h.HomeLoanApplication              : Started HomeLoanApplication in 5.389 seconds (JVM running for 5.955)
-2023-11-13 17:28:54.446  INFO 27720 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-13 17:28:54.446  INFO 27720 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-13 17:28:54.447  INFO 27720 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-11-13 17:28:54.479  INFO 27720 --- [http-nio-8085-exec-1] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In updateLoanApplication function in LoanApplicationServiceImpl
-2023-11-13 17:29:51.647  INFO 27720 --- [http-nio-8085-exec-2] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In updateStatusOfLoanApplication function in LoanApplicationServiceImpl
-2023-11-13 17:30:20.763  INFO 27720 --- [http-nio-8085-exec-3] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In retrieveLoanApplicationById function in LoanApplicationServiceImpl
-2023-11-13 17:32:32.534  INFO 27720 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 17:32:32.536  INFO 27720 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-11-13 17:32:32.545  INFO 27720 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-11-13 17:32:39.204  INFO 1428 --- [main] c.h.i.h.HomeLoanApplication              : Starting HomeLoanApplication using Java 19.0.2 on LIN-1TJT7G3 with PID 1428 (C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application\target\classes started by angayakw in C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application)
-2023-11-13 17:32:39.207  INFO 1428 --- [main] c.h.i.h.HomeLoanApplication              : No active profile set, falling back to 1 default profile: "default"
-2023-11-13 17:32:39.991  INFO 1428 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-13 17:32:40.100  INFO 1428 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 9 JPA repository interfaces.
-2023-11-13 17:32:40.743  INFO 1428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-2023-11-13 17:32:40.750  INFO 1428 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-13 17:32:40.751  INFO 1428 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2023-11-13 17:32:40.864  INFO 1428 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-13 17:32:40.864  INFO 1428 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1594 ms
-2023-11-13 17:32:41.077  INFO 1428 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-13 17:32:41.134  INFO 1428 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2023-11-13 17:32:41.280  INFO 1428 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-11-13 17:32:41.393  INFO 1428 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-13 17:32:41.624  INFO 1428 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-13 17:32:41.656  INFO 1428 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2023-11-13 17:32:42.540  INFO 1428 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-13 17:32:42.551  INFO 1428 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 17:32:43.344  WARN 1428 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-13 17:32:44.530  INFO 1428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
-2023-11-13 17:32:44.542  INFO 1428 --- [main] c.h.i.h.HomeLoanApplication              : Started HomeLoanApplication in 5.828 seconds (JVM running for 6.259)
-2023-11-13 17:32:48.786  INFO 1428 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-13 17:32:48.786  INFO 1428 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-13 17:32:48.787  INFO 1428 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2023-11-13 17:32:49.833  INFO 1428 --- [http-nio-8085-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 710 ms
-2023-11-13 17:32:57.550  INFO 1428 --- [http-nio-8085-exec-5] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In retrieveLoanApplicationById function in LoanApplicationServiceImpl
-2023-11-13 17:33:11.099  INFO 1428 --- [http-nio-8085-exec-6] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In updateStatusOfLoanApplication function in LoanApplicationServiceImpl
-2023-11-13 17:33:44.520  INFO 1428 --- [http-nio-8085-exec-7] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In retrieveLoanApplicationById function in LoanApplicationServiceImpl
-2023-11-13 17:34:01.193  INFO 1428 --- [http-nio-8085-exec-9] .i.h.s.i.IFinanceVerificationServiceImpl : Entered in updateStatus method in IFinanceVerificationServiceImpl
-2023-11-13 17:35:31.438  INFO 1428 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 17:35:31.440  INFO 1428 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-11-13 17:35:31.454  INFO 1428 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-11-13 17:35:35.325  INFO 22340 --- [main] c.h.i.h.HomeLoanApplication              : Starting HomeLoanApplication using Java 19.0.2 on LIN-1TJT7G3 with PID 22340 (C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application\target\classes started by angayakw in C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application)
-2023-11-13 17:35:35.328  INFO 22340 --- [main] c.h.i.h.HomeLoanApplication              : No active profile set, falling back to 1 default profile: "default"
-2023-11-13 17:35:36.204  INFO 22340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-13 17:35:36.320  INFO 22340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 9 JPA repository interfaces.
-2023-11-13 17:35:36.966  INFO 22340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-2023-11-13 17:35:36.975  INFO 22340 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-13 17:35:36.975  INFO 22340 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2023-11-13 17:35:37.083  INFO 22340 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-13 17:35:37.084  INFO 22340 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1707 ms
-2023-11-13 17:35:37.228  INFO 22340 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-13 17:35:37.270  INFO 22340 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2023-11-13 17:35:37.413  INFO 22340 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-11-13 17:35:37.531  INFO 22340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-13 17:35:37.719  INFO 22340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-13 17:35:37.746  INFO 22340 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2023-11-13 17:35:38.633  INFO 22340 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-13 17:35:38.641  INFO 22340 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 17:35:39.456  WARN 22340 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-13 17:35:40.645  INFO 22340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
-2023-11-13 17:35:40.656  INFO 22340 --- [main] c.h.i.h.HomeLoanApplication              : Started HomeLoanApplication in 5.804 seconds (JVM running for 6.28)
-2023-11-13 17:35:50.634  INFO 22340 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-13 17:35:50.634  INFO 22340 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-13 17:35:50.635  INFO 22340 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-11-13 17:35:51.763  INFO 22340 --- [http-nio-8085-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 754 ms
-2023-11-13 17:35:58.126  INFO 22340 --- [http-nio-8085-exec-5] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In retrieveLoanApplicationById function in LoanApplicationServiceImpl
-2023-11-13 17:39:02.963  INFO 22340 --- [http-nio-8085-exec-8] .i.h.s.i.IFinanceVerificationServiceImpl : Entered in updateStatus method in IFinanceVerificationServiceImpl
-2023-11-13 17:40:57.529  INFO 22340 --- [http-nio-8085-exec-10] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In updateLoanApplication function in LoanApplicationServiceImpl
-2023-11-13 17:41:37.203  INFO 22340 --- [http-nio-8085-exec-1] c.h.i.h.s.i.ILoanAgreementServiceImpl    : Entered into retrieveAgreementById method17
-2023-11-13 17:41:59.662  INFO 22340 --- [http-nio-8085-exec-2] c.h.i.h.s.i.ILoanAgreementServiceImpl    : Entered into retrieveAgreementById method17
-2023-11-13 17:45:09.588  INFO 22340 --- [http-nio-8085-exec-4] c.h.i.h.s.i.ILoanAgreementServiceImpl    : Entered into retrieveAgreementById method24
-2023-11-13 17:50:25.078  INFO 22340 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 17:50:25.081  INFO 22340 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-11-13 17:50:25.094  INFO 22340 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-11-13 17:55:02.307  INFO 13756 --- [main] c.h.i.h.HomeLoanApplication              : Starting HomeLoanApplication using Java 19.0.2 on LIN-1TJT7G3 with PID 13756 (C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application\target\classes started by angayakw in C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application)
-2023-11-13 17:55:02.311  INFO 13756 --- [main] c.h.i.h.HomeLoanApplication              : No active profile set, falling back to 1 default profile: "default"
-2023-11-13 17:55:03.048  INFO 13756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-13 17:55:03.137  INFO 13756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 9 JPA repository interfaces.
-2023-11-13 17:55:03.709  INFO 13756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-2023-11-13 17:55:03.720  INFO 13756 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-13 17:55:03.721  INFO 13756 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
-2023-11-13 17:55:03.831  INFO 13756 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-13 17:55:03.831  INFO 13756 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1463 ms
-2023-11-13 17:55:03.982  INFO 13756 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-13 17:55:04.027  INFO 13756 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2023-11-13 17:55:04.200  INFO 13756 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-11-13 17:55:04.399  INFO 13756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-13 17:55:04.613  INFO 13756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-13 17:55:04.638  INFO 13756 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2023-11-13 17:55:05.455  INFO 13756 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-13 17:55:05.463  INFO 13756 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 17:55:06.170  WARN 13756 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-13 17:55:07.289  INFO 13756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
-2023-11-13 17:55:07.299  INFO 13756 --- [main] c.h.i.h.HomeLoanApplication              : Started HomeLoanApplication in 5.442 seconds (JVM running for 5.888)
-2023-11-13 17:55:13.794  INFO 13756 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-13 17:55:13.794  INFO 13756 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-13 17:55:13.795  INFO 13756 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-11-13 17:55:14.785  INFO 13756 --- [http-nio-8085-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 652 ms
-2023-11-13 17:56:41.415  INFO 13756 --- [http-nio-8085-exec-7] c.h.i.h.s.i.ILoanAgreementServiceImpl    : Entered into addLandVerificationOfficer method in LandVerification Class
-2023-11-13 17:56:41.445  INFO 13756 --- [http-nio-8085-exec-7] c.h.i.h.s.i.ILoanAgreementServiceImpl    : Exited from addLandVerificationOfficer method in LandVerification Class
-2023-11-13 17:57:43.858  INFO 13756 --- [http-nio-8085-exec-9] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In retrieveLoanApplicationByStatus function in LoanApplicationServiceImpl
-2023-11-13 17:57:43.866 ERROR 13756 --- [http-nio-8085-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: Parameter value [WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]; nested exception is java.lang.IllegalArgumentException: Parameter value [WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]] with root cause
+2023-11-14 00:10:15.102  INFO 6360 --- [http-nio-8085-exec-7] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In retrieveLoanApplicationById function in LoanApplicationServiceImpl
+2023-11-14 00:10:56.975  INFO 6360 --- [http-nio-8085-exec-8] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In retrieveLoanApplicationByStatus function in LoanApplicationServiceImpl
+2023-11-14 00:10:56.977 ERROR 6360 --- [http-nio-8085-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: Parameter value [WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]; nested exception is java.lang.IllegalArgumentException: Parameter value [WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]] with root cause
 
 java.lang.IllegalArgumentException: Parameter value [WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]
 	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:54) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
@@ -839,7 +167,7 @@ java.lang.IllegalArgumentException: Parameter value [WAITING_FOR_LAND_VERIFICATI
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241) ~[spring-aop-5.3.30.jar:5.3.30]
 	at jdk.proxy2/jdk.proxy2.$Proxy127.findByStatus(Unknown Source) ~[na:na]
 	at com.hla.in.homeloanapplication.service.impl.ILoanApplicationServiceImpl.retrieveLoanApplicationByStatus(ILoanApplicationServiceImpl.java:189) ~[classes/:na]
-	at com.hla.in.homeloanapplication.controller.LandOfficerController.getPendingApplications(LandOfficerController.java:56) ~[classes/:na]
+	at com.hla.in.homeloanapplication.controller.LandOfficerController.getPendingApplications(LandOfficerController.java:57) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.30.jar:5.3.30]
@@ -889,14 +217,60 @@ java.lang.IllegalArgumentException: Parameter value [WAITING_FOR_LAND_VERIFICATI
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
 	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
 
-2023-11-13 18:00:32.761  INFO 13756 --- [http-nio-8085-exec-10] c.h.i.h.s.i.ILoanAgreementServiceImpl    : Entered into addCustomer method
-2023-11-13 18:00:34.681  INFO 13756 --- [http-nio-8085-exec-1] c.h.i.h.s.i.ILoanAgreementServiceImpl    : Entered into addCustomer method
-2023-11-13 18:00:57.027  INFO 13756 --- [http-nio-8085-exec-2] c.h.i.h.s.i.ILoanAgreementServiceImpl    : Entered into addCustomer method
-2023-11-13 18:02:35.038  INFO 13756 --- [http-nio-8085-exec-3] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In addLoanApplication function in LoanApplicationServiceImpl
-2023-11-13 18:03:17.368  INFO 13756 --- [http-nio-8085-exec-5] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In retrieveLoanApplicationByStatus function in LoanApplicationServiceImpl
-2023-11-13 18:03:17.370 ERROR 13756 --- [http-nio-8085-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: Parameter value [WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]; nested exception is java.lang.IllegalArgumentException: Parameter value [WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]] with root cause
+2023-11-14 00:14:08.946  INFO 6360 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-14 00:14:08.949  INFO 6360 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-14 00:14:08.961  INFO 6360 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-14 09:35:59.171  INFO 23056 --- [main] c.h.i.h.HomeLoanApplication              : Starting HomeLoanApplication using Java 19.0.2 on LIN-1TJT7G3 with PID 23056 (C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application\target\classes started by angayakw in C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application)
+2023-11-14 09:35:59.174  INFO 23056 --- [main] c.h.i.h.HomeLoanApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-11-14 09:36:00.181  INFO 23056 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-14 09:36:00.464  INFO 23056 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 263 ms. Found 9 JPA repository interfaces.
+2023-11-14 09:36:01.218  INFO 23056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2023-11-14 09:36:01.230  INFO 23056 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-14 09:36:01.230  INFO 23056 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-14 09:36:01.370  INFO 23056 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-14 09:36:01.370  INFO 23056 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2132 ms
+2023-11-14 09:36:01.612  INFO 23056 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-14 09:36:01.681  INFO 23056 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-11-14 09:36:01.874  INFO 23056 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-14 09:36:02.013  INFO 23056 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-14 09:36:02.360  INFO 23056 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-14 09:36:02.394  INFO 23056 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-14 09:36:03.460  INFO 23056 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-14 09:36:03.471  INFO 23056 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-14 09:36:04.322  WARN 23056 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-14 09:36:05.561  INFO 23056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2023-11-14 09:36:05.576  INFO 23056 --- [main] c.h.i.h.HomeLoanApplication              : Started HomeLoanApplication in 7.018 seconds (JVM running for 7.658)
+2023-11-14 09:36:07.588  INFO 23056 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-14 09:36:07.589  INFO 23056 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-14 09:36:07.598  INFO 23056 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-14 09:37:13.225  INFO 15692 --- [main] c.h.i.h.HomeLoanApplication              : Starting HomeLoanApplication using Java 19.0.2 on LIN-1TJT7G3 with PID 15692 (C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application\target\classes started by angayakw in C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application)
+2023-11-14 09:37:13.227  INFO 15692 --- [main] c.h.i.h.HomeLoanApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-11-14 09:37:14.112  INFO 15692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-14 09:37:14.244  INFO 15692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 9 JPA repository interfaces.
+2023-11-14 09:37:14.979  INFO 15692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2023-11-14 09:37:14.991  INFO 15692 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-14 09:37:14.991  INFO 15692 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-14 09:37:15.126  INFO 15692 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-14 09:37:15.126  INFO 15692 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1844 ms
+2023-11-14 09:37:15.325  INFO 15692 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-14 09:37:15.389  INFO 15692 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-11-14 09:37:15.579  INFO 15692 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-14 09:37:15.710  INFO 15692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-14 09:37:15.933  INFO 15692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-14 09:37:15.961  INFO 15692 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-14 09:37:17.020  INFO 15692 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-14 09:37:17.032  INFO 15692 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-14 09:37:17.833  WARN 15692 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-14 09:37:18.972  INFO 15692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2023-11-14 09:37:18.982  INFO 15692 --- [main] c.h.i.h.HomeLoanApplication              : Started HomeLoanApplication in 6.293 seconds (JVM running for 6.813)
+2023-11-14 09:37:35.002  INFO 15692 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-14 09:37:35.004  INFO 15692 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-14 09:37:35.013  INFO 15692 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2023-11-14 09:37:36.091  INFO 15692 --- [http-nio-8085-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 611 ms
+2023-11-14 09:38:11.840  INFO 15692 --- [http-nio-8085-exec-5] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In retrieveLoanApplicationByStatus function in LoanApplicationServiceImpl
+2023-11-14 09:38:11.868 ERROR 15692 --- [http-nio-8085-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: Parameter value [PENDING] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]; nested exception is java.lang.IllegalArgumentException: Parameter value [PENDING] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]] with root cause
 
-java.lang.IllegalArgumentException: Parameter value [WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]
+java.lang.IllegalArgumentException: Parameter value [PENDING] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]
 	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:54) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
 	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:27) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
 	at org.hibernate.query.internal.QueryParameterBindingImpl.validate(QueryParameterBindingImpl.java:90) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
@@ -940,7 +314,7 @@ java.lang.IllegalArgumentException: Parameter value [WAITING_FOR_LAND_VERIFICATI
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241) ~[spring-aop-5.3.30.jar:5.3.30]
 	at jdk.proxy2/jdk.proxy2.$Proxy127.findByStatus(Unknown Source) ~[na:na]
 	at com.hla.in.homeloanapplication.service.impl.ILoanApplicationServiceImpl.retrieveLoanApplicationByStatus(ILoanApplicationServiceImpl.java:189) ~[classes/:na]
-	at com.hla.in.homeloanapplication.controller.LandOfficerController.getPendingApplications(LandOfficerController.java:56) ~[classes/:na]
+	at com.hla.in.homeloanapplication.controller.AdminController.getPendingApplications(AdminController.java:106) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.30.jar:5.3.30]
@@ -990,201 +364,92 @@ java.lang.IllegalArgumentException: Parameter value [WAITING_FOR_LAND_VERIFICATI
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
 	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
 
-2023-11-13 18:03:36.194  INFO 13756 --- [http-nio-8085-exec-6] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In updateLoanApplication function in LoanApplicationServiceImpl
-2023-11-13 18:03:45.453  INFO 13756 --- [http-nio-8085-exec-7] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In retrieveLoanApplicationByStatus function in LoanApplicationServiceImpl
-2023-11-13 18:03:45.454 ERROR 13756 --- [http-nio-8085-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: Parameter value [WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]; nested exception is java.lang.IllegalArgumentException: Parameter value [WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]] with root cause
-
-java.lang.IllegalArgumentException: Parameter value [WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]
-	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:54) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
-	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:27) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
-	at org.hibernate.query.internal.QueryParameterBindingImpl.validate(QueryParameterBindingImpl.java:90) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
-	at org.hibernate.query.internal.QueryParameterBindingImpl.setBindValue(QueryParameterBindingImpl.java:55) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
-	at org.hibernate.query.internal.AbstractProducedQuery.setParameter(AbstractProducedQuery.java:501) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
-	at org.hibernate.query.internal.AbstractProducedQuery.setParameter(AbstractProducedQuery.java:122) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
-	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.setParameter(CriteriaQueryTypeQueryAdapter.java:393) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
-	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.setParameter(CriteriaQueryTypeQueryAdapter.java:61) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
-	at org.springframework.data.jpa.repository.query.QueryParameterSetter$BindableQuery.setParameter(QueryParameterSetter.java:327) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.QueryParameterSetter$NamedOrIndexedQueryParameterSetter.lambda$setParameter$3(QueryParameterSetter.java:124) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.QueryParameterSetter$ErrorHandling$1.execute(QueryParameterSetter.java:149) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.QueryParameterSetter$NamedOrIndexedQueryParameterSetter.setParameter(QueryParameterSetter.java:124) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.ParameterBinder.bind(ParameterBinder.java:82) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.ParameterBinder.bind(ParameterBinder.java:74) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.ParameterBinder.bindAndPrepare(ParameterBinder.java:96) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery$QueryPreparer.invokeBinding(PartTreeJpaQuery.java:324) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery$QueryPreparer.createQuery(PartTreeJpaQuery.java:243) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.doCreateQuery(PartTreeJpaQuery.java:106) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.createQuery(AbstractJpaQuery.java:233) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:128) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:90) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:156) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:144) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.7.17.jar:2.7.17]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.7.17.jar:2.7.17]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:160) ~[spring-data-commons-2.7.17.jar:2.7.17]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139) ~[spring-data-commons-2.7.17.jar:2.7.17]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.30.jar:5.3.30]
-	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:76) ~[spring-data-commons-2.7.17.jar:2.7.17]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.30.jar:5.3.30]
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.30.jar:5.3.30]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.30.jar:5.3.30]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.30.jar:5.3.30]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.30.jar:5.3.30]
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.30.jar:5.3.30]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.30.jar:5.3.30]
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:145) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.30.jar:5.3.30]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.30.jar:5.3.30]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.30.jar:5.3.30]
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241) ~[spring-aop-5.3.30.jar:5.3.30]
-	at jdk.proxy2/jdk.proxy2.$Proxy127.findByStatus(Unknown Source) ~[na:na]
-	at com.hla.in.homeloanapplication.service.impl.ILoanApplicationServiceImpl.retrieveLoanApplicationByStatus(ILoanApplicationServiceImpl.java:189) ~[classes/:na]
-	at com.hla.in.homeloanapplication.controller.LandOfficerController.getPendingApplications(LandOfficerController.java:56) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529) ~[tomcat-embed-core-9.0.82.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.82.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
-
-2023-11-13 18:03:51.680  INFO 13756 --- [http-nio-8085-exec-8] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In retrieveLoanApplicationByStatus function in LoanApplicationServiceImpl
-2023-11-13 18:03:51.681 ERROR 13756 --- [http-nio-8085-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: Parameter value [WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]; nested exception is java.lang.IllegalArgumentException: Parameter value [WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]] with root cause
-
-java.lang.IllegalArgumentException: Parameter value [WAITING_FOR_LAND_VERIFICATION_OFFICE_APPROVAL] did not match expected type [com.hla.in.homeloanapplication.enums.Status (n/a)]
-	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:54) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
-	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:27) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
-	at org.hibernate.query.internal.QueryParameterBindingImpl.validate(QueryParameterBindingImpl.java:90) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
-	at org.hibernate.query.internal.QueryParameterBindingImpl.setBindValue(QueryParameterBindingImpl.java:55) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
-	at org.hibernate.query.internal.AbstractProducedQuery.setParameter(AbstractProducedQuery.java:501) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
-	at org.hibernate.query.internal.AbstractProducedQuery.setParameter(AbstractProducedQuery.java:122) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
-	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.setParameter(CriteriaQueryTypeQueryAdapter.java:393) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
-	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.setParameter(CriteriaQueryTypeQueryAdapter.java:61) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
-	at org.springframework.data.jpa.repository.query.QueryParameterSetter$BindableQuery.setParameter(QueryParameterSetter.java:327) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.QueryParameterSetter$NamedOrIndexedQueryParameterSetter.lambda$setParameter$3(QueryParameterSetter.java:124) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.QueryParameterSetter$ErrorHandling$1.execute(QueryParameterSetter.java:149) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.QueryParameterSetter$NamedOrIndexedQueryParameterSetter.setParameter(QueryParameterSetter.java:124) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.ParameterBinder.bind(ParameterBinder.java:82) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.ParameterBinder.bind(ParameterBinder.java:74) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.ParameterBinder.bindAndPrepare(ParameterBinder.java:96) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery$QueryPreparer.invokeBinding(PartTreeJpaQuery.java:324) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery$QueryPreparer.createQuery(PartTreeJpaQuery.java:243) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.doCreateQuery(PartTreeJpaQuery.java:106) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.createQuery(AbstractJpaQuery.java:233) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:128) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:90) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:156) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:144) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.7.17.jar:2.7.17]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.7.17.jar:2.7.17]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:160) ~[spring-data-commons-2.7.17.jar:2.7.17]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139) ~[spring-data-commons-2.7.17.jar:2.7.17]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.30.jar:5.3.30]
-	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:76) ~[spring-data-commons-2.7.17.jar:2.7.17]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.30.jar:5.3.30]
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.30.jar:5.3.30]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.30.jar:5.3.30]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.30.jar:5.3.30]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.30.jar:5.3.30]
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.30.jar:5.3.30]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.30.jar:5.3.30]
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:145) ~[spring-data-jpa-2.7.17.jar:2.7.17]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.30.jar:5.3.30]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.30.jar:5.3.30]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.30.jar:5.3.30]
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241) ~[spring-aop-5.3.30.jar:5.3.30]
-	at jdk.proxy2/jdk.proxy2.$Proxy127.findByStatus(Unknown Source) ~[na:na]
-	at com.hla.in.homeloanapplication.service.impl.ILoanApplicationServiceImpl.retrieveLoanApplicationByStatus(ILoanApplicationServiceImpl.java:189) ~[classes/:na]
-	at com.hla.in.homeloanapplication.controller.LandOfficerController.getPendingApplications(LandOfficerController.java:56) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529) ~[tomcat-embed-core-9.0.82.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.30.jar:5.3.30]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.82.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
-	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
-
-2023-11-13 18:14:22.149  INFO 13756 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-13 18:14:22.150  INFO 13756 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-11-13 18:14:22.153  INFO 13756 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-14 09:38:34.274  INFO 15692 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-14 09:38:34.275  INFO 15692 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-14 09:38:34.293  INFO 15692 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-14 09:48:20.740  INFO 5756 --- [main] c.h.i.h.HomeLoanApplication              : Starting HomeLoanApplication using Java 19.0.2 on LIN-1TJT7G3 with PID 5756 (C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application\target\classes started by angayakw in C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application)
+2023-11-14 09:48:20.743  INFO 5756 --- [main] c.h.i.h.HomeLoanApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-11-14 09:48:21.571  INFO 5756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-14 09:48:21.683  INFO 5756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 9 JPA repository interfaces.
+2023-11-14 09:48:22.413  INFO 5756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2023-11-14 09:48:22.424  INFO 5756 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-14 09:48:22.424  INFO 5756 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-14 09:48:22.553  INFO 5756 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-14 09:48:22.554  INFO 5756 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1752 ms
+2023-11-14 09:48:22.737  INFO 5756 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-14 09:48:22.790  INFO 5756 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-11-14 09:48:22.978  INFO 5756 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-14 09:48:23.102  INFO 5756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-14 09:48:23.313  INFO 5756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-14 09:48:23.344  INFO 5756 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-14 09:48:24.271  INFO 5756 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-14 09:48:24.280  INFO 5756 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-14 09:48:25.166  WARN 5756 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-14 09:48:26.412  INFO 5756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2023-11-14 09:48:26.423  INFO 5756 --- [main] c.h.i.h.HomeLoanApplication              : Started HomeLoanApplication in 6.201 seconds (JVM running for 6.699)
+2023-11-14 09:48:36.568  INFO 5756 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-14 09:48:36.569  INFO 5756 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-14 09:48:36.570  INFO 5756 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-14 09:48:37.705  INFO 5756 --- [http-nio-8085-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 660 ms
+2023-11-14 09:49:50.040  INFO 5756 --- [http-nio-8085-exec-7] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In addLoanApplication function in LoanApplicationServiceImpl
+2023-11-14 09:50:18.117  INFO 5756 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-14 09:50:18.119  INFO 5756 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-14 09:50:18.128  INFO 5756 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-14 09:53:39.912  INFO 22944 --- [main] c.h.i.h.HomeLoanApplication              : Starting HomeLoanApplication using Java 19.0.2 on LIN-1TJT7G3 with PID 22944 (C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application\target\classes started by angayakw in C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application)
+2023-11-14 09:53:39.915  INFO 22944 --- [main] c.h.i.h.HomeLoanApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-11-14 09:53:40.902  INFO 22944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-14 09:53:41.005  INFO 22944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 9 JPA repository interfaces.
+2023-11-14 09:53:41.726  INFO 22944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2023-11-14 09:53:41.742  INFO 22944 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-14 09:53:41.742  INFO 22944 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-14 09:53:41.881  INFO 22944 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-14 09:53:41.882  INFO 22944 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1908 ms
+2023-11-14 09:53:42.057  INFO 22944 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-14 09:53:42.106  INFO 22944 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-11-14 09:53:42.296  INFO 22944 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-14 09:53:42.429  INFO 22944 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-14 09:53:42.640  INFO 22944 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-14 09:53:42.672  INFO 22944 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-14 09:53:43.743  INFO 22944 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-14 09:53:43.752  INFO 22944 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-14 09:53:44.601  WARN 22944 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-14 09:53:45.732  INFO 22944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2023-11-14 09:53:45.746  INFO 22944 --- [main] c.h.i.h.HomeLoanApplication              : Started HomeLoanApplication in 6.469 seconds (JVM running for 7.002)
+2023-11-14 09:53:53.151  INFO 22944 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-14 09:53:53.152  INFO 22944 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-14 09:53:53.153  INFO 22944 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-14 09:53:54.288  INFO 22944 --- [http-nio-8085-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 715 ms
+2023-11-14 09:54:05.108  INFO 22944 --- [http-nio-8085-exec-5] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In retrieveLoanApplicationByStatus function in LoanApplicationServiceImpl
+2023-11-14 09:56:49.641  INFO 22944 --- [http-nio-8085-exec-8] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In retrieveLoanApplicationByStatus function in LoanApplicationServiceImpl
+2023-11-14 09:57:10.393  INFO 22944 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-14 09:57:10.395  INFO 22944 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-14 09:57:10.398  INFO 22944 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-14 10:37:32.809  INFO 30028 --- [main] c.h.i.h.HomeLoanApplication              : Starting HomeLoanApplication using Java 19.0.2 on LIN-1TJT7G3 with PID 30028 (C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application\target\classes started by angayakw in C:\Users\angayakw\.Shared Study Material(User Data)\Sprint Final Project - 1\home-loan-application)
+2023-11-14 10:37:32.812  INFO 30028 --- [main] c.h.i.h.HomeLoanApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-11-14 10:37:33.642  INFO 30028 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-14 10:37:33.741  INFO 30028 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 9 JPA repository interfaces.
+2023-11-14 10:37:34.482  INFO 30028 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2023-11-14 10:37:34.494  INFO 30028 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-14 10:37:34.494  INFO 30028 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-14 10:37:34.619  INFO 30028 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-14 10:37:34.620  INFO 30028 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1751 ms
+2023-11-14 10:37:34.820  INFO 30028 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-14 10:37:34.878  INFO 30028 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-11-14 10:37:35.064  INFO 30028 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-14 10:37:35.189  INFO 30028 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-14 10:37:35.405  INFO 30028 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-14 10:37:35.438  INFO 30028 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-14 10:37:36.412  INFO 30028 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-14 10:37:36.419  INFO 30028 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-14 10:37:37.320  WARN 30028 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-14 10:37:38.425  INFO 30028 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2023-11-14 10:37:38.436  INFO 30028 --- [main] c.h.i.h.HomeLoanApplication              : Started HomeLoanApplication in 6.153 seconds (JVM running for 6.675)
+2023-11-14 10:38:04.713  INFO 30028 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-14 10:38:04.713  INFO 30028 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-14 10:38:04.714  INFO 30028 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-14 10:38:05.719  INFO 30028 --- [http-nio-8085-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 603 ms
+2023-11-14 10:38:21.078  INFO 30028 --- [http-nio-8085-exec-5] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In retrieveLoanApplicationByStatus function in LoanApplicationServiceImpl
+2023-11-14 10:38:58.271  INFO 30028 --- [http-nio-8085-exec-6] c.h.i.h.s.i.ILoanApplicationServiceImpl  : In retrieveLoanApplicationByStatus function in LoanApplicationServiceImpl
+2023-11-14 10:40:06.064  INFO 30028 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-14 10:40:06.065  INFO 30028 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-14 10:40:06.075  INFO 30028 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
