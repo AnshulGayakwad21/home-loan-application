@@ -19,7 +19,6 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Optional;
 
@@ -31,9 +30,6 @@ public class ICustomerServiceImpl implements ICustomerService {
 
     @Autowired
     ILoanApplicationRepository loanRepo;
-
-//    @Autowired
-//    private PasswordEncoder bcryptEncoder;
 
     @Override
     public Customer viewCustomer(int custId) throws ResourceNotFoundException {
@@ -54,38 +50,13 @@ public class ICustomerServiceImpl implements ICustomerService {
     @Override
     public Customer addCustomer(CustomerDto customerDto) throws CouldNotBeAddedException {
         logger.info("Entered into addCustomer method");
-//        if (custRepo.findByMobileNumber(customer.getMobileNumber()) != null) {
-//            throw new CouldNotBeAddedException("Customer already exists");
-//        }
+        if (custRepo.findByMobileNumber(customerDto.getMobileNumber()) != null) {
+            throw new CouldNotBeAddedException("Customer already exists With Mobile Number");
+        }
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/MM/yyyy");
-        //String date = String.valueOf(customerDto.getDateOfBirth());
-
-        //convert String to LocalDate
-        //LocalDate dob = LocalDate.parse(date, formatter);
-//
-//        /*
-//        checking for age > 18 years
-//         */
-//        LocalDate now = LocalDate.now();
-//        long age = ChronoUnit.YEARS.between(dob, now);
-//        if (age < 18) {
-//            throw new CouldNotBeAddedException("Age should be at least 18");
-//        }
-
-
         Customer newCustomer = new Customer();
-//        newCustomer.setCustomerName(customerDto.getCustomerName());
-//        newCustomer.setGender(customerDto.getGender());
-//        newCustomer.setEmailId(customerDto.getEmailId());
-//        newCustomer.setPassword(customerDto.getPassword());
-//        newCustomer.setMobileNumber(customerDto.getMobileNumber());
-//        newCustomer.setAadharNumber(customerDto.getAadharNumber());
-//        newCustomer.setPanNumber(customerDto.getPanNumber());
-//        newCustomer.setNationality(customerDto.getNationality());
-
         BeanUtils.copyProperties(customerDto, newCustomer);
         newCustomer.setDateOfBirth(LocalDate.parse(customerDto.getDateOfBirth(), formatter));
-
         newCustomer.setRole("customer");
         return custRepo.save(newCustomer);
     }
@@ -103,7 +74,7 @@ public class ICustomerServiceImpl implements ICustomerService {
             loanRepo.save(loanApplication);
             return custRepo.save(customer);
         } else {
-            throw new ResourceNotFoundException("User Not found for Id" + id);
+            throw new ResourceNotFoundException("User Not found for Id : " + id);
         }
     }
 
@@ -130,20 +101,4 @@ public class ICustomerServiceImpl implements ICustomerService {
             throw new ResourceNotFoundException("User Not found for Id" + custId);
         }
     }
-
-//    @Override
-//    public String loginCustomer(UserLoginDto userLoginDto) throws AuthenticationFailedException {
-//
-//        Customer customer = custRepo.findById(userLoginDto.getUserId()).orElseThrow(() -> new AuthenticationFailedException("Invalid Credentials "));
-//        String password = userLoginDto.getPassword();
-//
-//        if (bcryptEncoder.matches(password, customer.getPassword())) {
-//            return "Login successfully";
-//        }
-//        return "Invalid Credentials";
-//
-//    }
-
-
 }
-

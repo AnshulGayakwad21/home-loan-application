@@ -14,5 +14,4 @@ public interface IFinanceVerificationService {
 
     FinanceVerificationOfficer addFinanceVerificationOfficer(FinanceVerificationOfficerDto financeVerificationDto) throws CouldNotBeAddedException;
 
-    //String loginFinanceVerificationOfficer(UserLoginDto user) throws InvalidCredentialException;
 }

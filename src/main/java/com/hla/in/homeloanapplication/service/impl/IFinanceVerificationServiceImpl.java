@@ -14,9 +14,9 @@ import com.hla.in.homeloanapplication.enums.Status;
 import com.hla.in.homeloanapplication.util.HomeLoanBorrowingAmountCalculator;
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 
 
 @Service
@@ -29,9 +29,6 @@ public class IFinanceVerificationServiceImpl implements IFinanceVerificationServ
     @Autowired
     ILoanApplicationRepository loanApplicationRepository;
 
-//    @Autowired
-//    private PasswordEncoder bcryptEncoder;
-
     @Override
     public FinanceVerificationOfficer addFinanceVerificationOfficer(FinanceVerificationOfficerDto financeVerificationDto) throws CouldNotBeAddedException {
         logger.info("Entered in addFinanceVerificationOfficer method in IFinanceVerificationServiceImpl");
@@ -39,10 +36,7 @@ public class IFinanceVerificationServiceImpl implements IFinanceVerificationServ
             throw new CouldNotBeAddedException("Officer already exists");
         }
         FinanceVerificationOfficer financeVerificationOfficer = new FinanceVerificationOfficer();
-        financeVerificationOfficer.setFinOfficerName(financeVerificationDto.getFinOfficerName());
-        financeVerificationOfficer.setFinOfficerContact(financeVerificationDto.getFinOfficerContact());
-        financeVerificationOfficer.setPassword(financeVerificationDto.getPassword());
-        financeVerificationOfficer.setUserId(financeVerificationDto.getUserId());
+        BeanUtils.copyProperties(financeVerificationDto, financeVerificationOfficer);
         financeVerificationOfficer.setRole("FinanceVerificationOfficer");
 
         return financeVerificationRepository.save(financeVerificationOfficer);
@@ -54,8 +48,6 @@ public class IFinanceVerificationServiceImpl implements IFinanceVerificationServ
     based on annual income and expenses
     and updating the loan application status accordingly.
      */
-
-
     @Override
     public LoanApplication updateStatus(Long id) throws ResourceNotFoundException {
 
@@ -86,16 +78,4 @@ public class IFinanceVerificationServiceImpl implements IFinanceVerificationServ
             throw new ResourceNotFoundException("This application is not under your authority");
         }
     }
-
-//    @Override
-//    public String loginFinanceVerificationOfficer(@RequestBody UserLoginDto user) throws AuthenticationFailedException {
-//        FinanceVerificationOfficer financeVerificationOfficer = financeVerificationRepository.findById(user.getUserId())
-//                .orElseThrow(() -> new AuthenticationFailedException("Invalid Credentials"));
-//
-//        if (bcryptEncoder.matches(user.getPassword(), financeVerificationOfficer.getPassword())) {
-//            return "Login successfully";
-//        }
-//        return "Invalid Credentials";
-//    }
-
 }

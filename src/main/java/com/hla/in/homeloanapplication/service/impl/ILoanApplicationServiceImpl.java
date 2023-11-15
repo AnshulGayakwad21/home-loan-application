@@ -5,7 +5,6 @@ import com.hla.in.homeloanapplication.dtos.LoanApplicationDto;
 import com.hla.in.homeloanapplication.entities.*;
 import com.hla.in.homeloanapplication.enums.Status;
 import com.hla.in.homeloanapplication.exceptions.CouldNotBeAddedException;
-import com.hla.in.homeloanapplication.exceptions.CustomerNotFoundException;
 import com.hla.in.homeloanapplication.exceptions.ResourceNotFoundException;
 import com.hla.in.homeloanapplication.repository.ICustomerRepository;
 import com.hla.in.homeloanapplication.repository.IEMIRepository;
@@ -73,7 +72,7 @@ public class ILoanApplicationServiceImpl implements ILoanApplicationService {
     public LoanApplication addLoanApplication(@Valid LoanApplicationDto loanApplication) throws ResourceNotFoundException, CouldNotBeAddedException {
         logger.info("In addLoanApplication function in LoanApplicationServiceImpl");
         if (loanRepo.findByCustomerId(loanApplication.getCustomerId()) != null) {
-            throw new CouldNotBeAddedException("Loan application exists with the customer ID:" + loanApplication.getCustomerId());
+            throw new CouldNotBeAddedException("Loan application exists with the customer ID : " + loanApplication.getCustomerId());
         }
         LoanApplication loanApplication1 = new LoanApplication();
 
@@ -148,7 +147,7 @@ public class ILoanApplicationServiceImpl implements ILoanApplicationService {
 
         emi.setEmiAmount(emiCalculator.getEMIAmount());
 
-        double interestAmount = (emi.getEmiAmount() * tenure* 12)
+        double interestAmount = (emi.getEmiAmount() * tenure)
                 - emi.getLoanAmount(); //find interest
 
         emi.setInterestAmount(Double.parseDouble(String.format("%.2f", interestAmount)));

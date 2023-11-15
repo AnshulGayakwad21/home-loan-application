@@ -1,6 +1,5 @@
 package com.hla.in.homeloanapplication.dtos;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -34,7 +33,7 @@ public class CustomerDto {
     @Email(message = "Please enter a valid email address")
     private String emailId;
 
-    @NotNull(message = "Please enter a valid Date Of Birth")
+    @NotNull(message = "Please enter a valid Date Of Birth in the form of 'dd/MM/yyyy'")
     @NotEmpty(message = "DOB cannot be empty")
     private String dateOfBirth;
 

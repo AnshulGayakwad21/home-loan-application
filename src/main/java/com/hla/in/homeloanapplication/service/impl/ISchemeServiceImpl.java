@@ -42,8 +42,6 @@ public class ISchemeServiceImpl implements ISchemeService {
         logger.info("Entered in addScheme method in ISchemeServiceClass");
         Scheme scheme = new Scheme();
         BeanUtils.copyProperties(schemeDto, scheme);
-//        scheme.setInterestRate(schemeDto.getInterestRate());
-//        scheme.setTenure(schemeDto.getTenure());
         return schemeRepo.save(scheme);
     }
 

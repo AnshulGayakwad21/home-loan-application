@@ -48,13 +48,9 @@ public class LoanApplication {
     @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name = "scheme_scheme_id", referencedColumnName = "schemeId")
     Scheme scheme;
-////////////////////////////////////////////////////////////////////////////////////////////////
-    //added this relationship from Master homeloan application
-    //If it is giving errors, then delete it
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_loanagrmnt_id",referencedColumnName = "loanAgreementId")
     LoanAgreement loanAgreement;
-
-
 
 }

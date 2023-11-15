@@ -14,5 +14,4 @@ public interface ILandVerificationService {
 
     LandVerificationOfficer addLandVerificationOfficer(LandVerificationOfficerDto landVerificationOfficerDto) throws CouldNotBeAddedException;
 
-    //String loginLandOfficer(UserLoginDto userLoginDto) throws InvalidCredentialException;
 }

@@ -15,15 +15,14 @@ public class HomeLoanBorrowingAmountCalculator {
 	private double totalAnnualIncome;
 	private double monthlyExpenses;
 	private double otherMonthlyExpenses;
-	
-	//function
+
 	public double getHomeLoanBorrowingAmount() {
-		double monthlyIncomme = this.totalAnnualIncome/12;
-		if(monthlyIncomme < 15000.0) {
+		double monthlyIncome = this.totalAnnualIncome/12;
+		if(monthlyIncome < 15000.0) {
 			return 0.0;
 		}
 		double annualSavings = (this.totalAnnualIncome - (12*(this.monthlyExpenses+this.otherMonthlyExpenses)));
-		double eligibleAmount = annualSavings*(this.tenure) + ((this.rateOfInterest*annualSavings)/100);
+		double eligibleAmount = annualSavings/(this.tenure) + ((this.rateOfInterest*annualSavings)/100);
 		if(eligibleAmount > this.loanAmount){
 			return this.loanAmount;
 		}

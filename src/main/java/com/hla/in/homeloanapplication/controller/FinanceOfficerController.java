@@ -2,7 +2,6 @@ package com.hla.in.homeloanapplication.controller;
 
 
 import com.hla.in.homeloanapplication.dtos.FinanceVerificationOfficerDto;
-import com.hla.in.homeloanapplication.dtos.UserLoginDto;
 import com.hla.in.homeloanapplication.entities.FinanceVerificationOfficer;
 import com.hla.in.homeloanapplication.entities.LoanApplication;
 import com.hla.in.homeloanapplication.enums.Status;
@@ -47,19 +46,12 @@ public class FinanceOfficerController {
     }
 
     @PutMapping("/loan/{id}")
-    @Operation(summary = "Update Status of Loan Application by ID", description = "")
+    @Operation(summary = "Update/Approve Status of Loan Application by ID", description = "")
     public ResponseEntity<LoanApplication> updateStatusOfLoanApplication(@PathVariable Long id) throws ResourceNotFoundException
     {
         LoanApplication loanApplication = financeVerificationService.updateStatus(id);
         return new ResponseEntity<>(loanApplication, HttpStatus.OK);
     }
-
-//    @PostMapping("/login")
-//    public ResponseEntity<String> loginFinanceVerificationOfficer(@RequestBody UserLoginDto user) throws AuthenticationFailedException {
-//
-//        String response = financeVerificationService.loginFinanceVerificationOfficer(user);
-//        return new ResponseEntity<>(response, HttpStatus.OK);
-//    }
 
     @GetMapping("/loans/pending")
     @Operation(summary = "Get All Pending Applications", description = "")

@@ -20,10 +20,7 @@ public class Scheme {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int schemeId;
-    @NotNull
     private String schemeName;
-    @NotNull
     private double interestRate;
-    @NotNull
     private int tenure;
 }

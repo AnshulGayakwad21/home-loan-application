@@ -3,13 +3,11 @@ package com.hla.in.homeloanapplication.controller;
 import com.hla.in.homeloanapplication.dtos.CustomerDto;
 import com.hla.in.homeloanapplication.dtos.DocsDto;
 import com.hla.in.homeloanapplication.dtos.LoanApplicationDto;
-import com.hla.in.homeloanapplication.dtos.UserLoginDto;
 import com.hla.in.homeloanapplication.entities.Customer;
 import com.hla.in.homeloanapplication.entities.LoanAgreement;
 import com.hla.in.homeloanapplication.entities.LoanApplication;
 import com.hla.in.homeloanapplication.entities.Scheme;
 import com.hla.in.homeloanapplication.exceptions.CouldNotBeAddedException;
-import com.hla.in.homeloanapplication.exceptions.InvalidCredentialException;
 import com.hla.in.homeloanapplication.exceptions.ResourceNotFoundException;
 import com.hla.in.homeloanapplication.service.impl.ICustomerServiceImpl;
 import com.hla.in.homeloanapplication.service.impl.ILoanAgreementServiceImpl;
@@ -42,9 +40,7 @@ public class CustomerController {
     private ILoanAgreementServiceImpl iLoanAgreementService;
 
 
-    /*
-        Applying for a New Loan - /customer/apply
-     */
+    //Only Customer can be Apply to New Loan Application
     @PostMapping("/apply")
     @Operation(summary = "Create New Loan Application", description = "Provide Date in dd/MM/yyyy format")
     public ResponseEntity<LoanApplication> createNewLoanApplication(@Valid @RequestBody LoanApplicationDto loanApplicationDto) throws ResourceNotFoundException, CouldNotBeAddedException {
@@ -55,9 +51,7 @@ public class CustomerController {
 
     }
 
-    /*
-        Signup a New Customer - /customer/signup/
-     */
+    //Adding New Customer Using CustomerDTO
     @PostMapping("/addCustomer")
     @Operation(summary = "Create New Customer", description = "Provide Date in dd/MM/yyyy format")
     public ResponseEntity<Customer> createNewCustomer(@Valid @RequestBody CustomerDto customerDto) throws CouldNotBeAddedException {
@@ -66,17 +60,6 @@ public class CustomerController {
         return new ResponseEntity<>(newCustomer, HttpStatus.CREATED);
     }
 
-//    @PostMapping("/login")
-//    public ResponseEntity<String> loginCustomer(@RequestBody UserLoginDto customerDto) throws InvalidCredentialException {
-//
-//        try {
-//            String response = customerService.loginCustomer(customerDto);
-//        }
-//        catch (InvalidCredentialException e) {
-//            throw new InvalidCredentialException("Invalid");
-//        }
-//        return new ResponseEntity<>(response, HttpStatus.OK);
-//    }
 
     @PutMapping("/document/{id}")
     @Operation(summary = "Update Documents", description = "")
@@ -86,7 +69,7 @@ public class CustomerController {
     }
 
     @GetMapping("/loan/{loanApplicationId}")
-    @Operation(summary = "Retrieve Loan Application by ID", description = "")
+    @Operation(summary = "Get Loan Application by ID", description = "")
     public ResponseEntity<LoanApplication> retrieveLoanApplicationById(@PathVariable Long loanApplicationId) throws ResourceNotFoundException {
         LoanApplication loanApplication;
         loanApplication = loanApplicationService.retrieveLoanApplicationById(loanApplicationId);

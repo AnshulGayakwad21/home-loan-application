@@ -1,7 +1,6 @@
 package com.hla.in.homeloanapplication.controller;
 
 import com.hla.in.homeloanapplication.dtos.LandVerificationOfficerDto;
-import com.hla.in.homeloanapplication.dtos.UserLoginDto;
 import com.hla.in.homeloanapplication.entities.LandVerificationOfficer;
 import com.hla.in.homeloanapplication.entities.LoanApplication;
 import com.hla.in.homeloanapplication.enums.Status;
@@ -44,7 +43,7 @@ public class LandOfficerController {
     }
 
     @PutMapping("/loan/{id}")
-    @Operation(summary = "Update Status of Application by ID", description = "")
+    @Operation(summary = "Update/Approve Status of Application by ID", description = "")
     public ResponseEntity<LoanApplication> updateStatusOfLoanApplication(@PathVariable Long id) throws ResourceNotFoundException {
         LoanApplication loanApplication = loanApplicationService.updateStatusOfLoanApplication(id, Status.WAITING_FOR_FINANCE_APPROVAL);
         return new ResponseEntity<>(loanApplication, HttpStatus.OK);
@@ -60,13 +59,5 @@ public class LandOfficerController {
         }
         return new ResponseEntity<>(pendingApplications, HttpStatus.OK);
     }
-//    @PostMapping("/login")
-//    public ResponseEntity<String> loginLandOfficer(@RequestBody UserLoginDto userLoginDto) throws InvalidCredentialException {
-//        String response = landVerificationService.loginLandOfficer(userLoginDto);
-//        return new ResponseEntity<>(response, HttpStatus.OK);
-//
-//    }
-
-
 }
 

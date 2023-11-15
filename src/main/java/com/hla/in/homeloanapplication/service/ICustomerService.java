@@ -21,5 +21,4 @@ public interface ICustomerService {
 
     List<Customer> viewCustomerList(String dateOfApplication) throws ResourceNotFoundException;
 
-    //String loginCustomer(UserLoginDto userLoginDto) throws AuthenticationFailedException;
 }

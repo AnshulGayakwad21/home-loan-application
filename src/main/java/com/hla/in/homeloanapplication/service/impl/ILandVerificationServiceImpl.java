@@ -1,7 +1,5 @@
 package com.hla.in.homeloanapplication.service.impl;
 
-
-
 import com.hla.in.homeloanapplication.dtos.LandVerificationOfficerDto;
 import com.hla.in.homeloanapplication.entities.LandVerificationOfficer;
 import com.hla.in.homeloanapplication.entities.LoanApplication;
@@ -12,6 +10,7 @@ import com.hla.in.homeloanapplication.repository.ILoanApplicationRepository;
 import com.hla.in.homeloanapplication.service.ILandVerificationService;
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,10 +24,9 @@ public class ILandVerificationServiceImpl implements ILandVerificationService {
     @Autowired
     ILoanApplicationRepository loanApplicationRepository;
 
-//    @Autowired
-//    private PasswordEncoder bcryptEncoder;
     @Override
     public void updateStatus(LoanApplication loanApplication) throws ResourceNotFoundException {
+        //Updating/Approving the status of the Raised Ticket by Admin
         logger.info("Entered into updateStatus method in LandVerification Class");
         if(loanApplicationRepository.findById(loanApplication.getApplicationId()).isPresent()){
             loanApplication.setLandVerificationApproval(true);
@@ -44,29 +42,16 @@ public class ILandVerificationServiceImpl implements ILandVerificationService {
     public LandVerificationOfficer addLandVerificationOfficer(LandVerificationOfficerDto landVerificationOfficerDto) throws CouldNotBeAddedException {
         logger.info("Entered into addLandVerificationOfficer method in LandVerification Class");
         if(landVerificationRepository.findByOfficerContact(landVerificationOfficerDto.getOfficeContact()) != null){
-            throw new CouldNotBeAddedException("Officer already exists");
+            throw new CouldNotBeAddedException("Officer already exists with contact");
         }
         LandVerificationOfficer landVerificationOfficer = new LandVerificationOfficer();
         landVerificationOfficer.setOfficerContact(landVerificationOfficerDto.getOfficeContact());
         landVerificationOfficer.setOfficerName(landVerificationOfficerDto.getOfficeName());
         landVerificationOfficer.setPassword(landVerificationOfficerDto.getPassword());
+        BeanUtils.copyProperties(landVerificationOfficerDto, landVerificationOfficer);
         landVerificationOfficer.setRole("LAND_VERIFICATION_OFFICER");
         logger.info("Exited from addLandVerificationOfficer method in LandVerification Class");
         return landVerificationRepository.save(landVerificationOfficer);
 
     }
-
-//    @Override
-//    public String loginLandOfficer(UserLoginDto userLoginDto) throws AuthenticationFailedException {
-//        LandVerificationOfficer landVerificationOfficer = landVerificationRepository.findById(userLoginDto.getUserId())
-//                .orElseThrow(() -> new AuthenticationFailedException("Invalid Credentials "));
-//        String password = userLoginDto.getPassword();
-//
-//        if (bcryptEncoder.matches(password, landVerificationOfficer.getPassword())) {
-//            return "Login successfully";
-//        }
-//        return "Invalid Credentials";
-//
-//    }
-
 }

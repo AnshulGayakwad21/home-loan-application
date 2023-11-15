@@ -19,37 +19,5 @@ public class EMICalculator {
 		return (loanAmount+(loanAmount*rateOfInterest))/(tenure);
 	}
 
-
-//	public double getLoanAmount() {
-//		return loanAmount;
-//	}
-//
-//	public void setLoanAmount(double loanAmount) {
-//		this.loanAmount = loanAmount;
-//	}
-//
-//	public double getRateOfInterest() {
-//		return rateOfInterest;
-//	}
-//
-//	public void setRateOfInterest(double rateOfInterest) {
-//		this.rateOfInterest = rateOfInterest;
-//	}
-//
-//	public int getTenure() {
-//		return tenure;
-//	}
-//
-//	public void setTenure(int tenure) {
-//		this.tenure = tenure;
-//	}
-//
-//	@Override
-//	public String toString() {
-//		return "EmiCalculator [loanAmount=" + loanAmount + ", rateOfInterest=" + rateOfInterest + ", tenure=" + tenure
-//				+ "]";
-//	}
-
 }
-
 

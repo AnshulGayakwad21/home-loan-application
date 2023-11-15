@@ -13,7 +13,6 @@ import com.hla.in.homeloanapplication.service.ISchemeService;
 import com.hla.in.homeloanapplication.service.impl.IAdminService;
 import com.hla.in.homeloanapplication.service.impl.ILoanAgreementServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,9 +34,6 @@ public class AdminController {
     @Autowired
     ISchemeService schemeService;
 
-//    @Autowired
-//    IAdminService adminService;
-
     @Autowired
     ILoanAgreementServiceImpl iLoanAgreementService;
 
@@ -52,7 +48,7 @@ public class AdminController {
     }
 
     @GetMapping("/users")
-    @Operation(summary = "Get All Users", description = "")
+    @Operation(summary = "Get All Customers", description = "")
     public ResponseEntity<List<Customer>> getUsers() throws ResourceNotFoundException {
         List<Customer> customers = customerService.viewAllCustomers();
         return new ResponseEntity<>(customers, HttpStatus.OK);
@@ -121,9 +117,6 @@ public class AdminController {
         return new ResponseEntity<>( savedLoanApplication, HttpStatus.OK);
     }
 
-//    public ILoanApplicationService getLoanApplicationService() {
-//        return loanApplicationService;
-//    }
 
     @PostMapping("/scheme")
     @Operation(summary = "Add new Scheme", description = "")

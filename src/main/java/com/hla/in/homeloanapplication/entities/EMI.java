@@ -24,6 +24,4 @@ public class EMI {
 	private double emiAmount;
 	private double loanAmount;
 	private double interestAmount;
-
 }
-// Author : Saikiran
